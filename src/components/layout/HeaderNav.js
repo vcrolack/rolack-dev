@@ -1,29 +1,29 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../../assets/img/nav-logo/logo-lg.svg'
 
 export const HeaderNav = () => {
   return (
-    <header>
+    <header className='header'>
       <div className="logo">
-        <span></span>
-        <h3>Rolack Dev</h3>
+        <img src={logo} alt="logo header" />
       </div>
       <nav>
         <ul>
           <li>
-            <NavLink to="/inicio">Home</NavLink>
+            <NavLink to="/home" className={({isActive}) => (isActive ? "activated" : "")}>Home</NavLink>
           </li>
           <li>
-            <NavLink to="/portfolio">Portfolio</NavLink>
+            <NavLink to="/portfolio" className={({isActive}) => (isActive ? "activated" : "")}>Portfolio</NavLink>
           </li>
           <li>
-            <NavLink to="/services">Services</NavLink>
+            <NavLink to="/services" className={({isActive}) => (isActive ? "activated" : "")}>Services</NavLink>
           </li>
           <li>
-            <NavLink to="/curriculum">Curriculum</NavLink>
+            <NavLink to="/curriculum" className={({isActive}) => (isActive ? "activated" : "")}>Curriculum</NavLink>
           </li>
           <li>
-            <NavLink to="/contact">Contact</NavLink>
+            <NavLink to="/contact" className={({isActive}) => (isActive ? "activated" : "")}>Contact</NavLink>
           </li>
         </ul>
       </nav>
