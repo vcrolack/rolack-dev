@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function Banner({ image }) {
+export const Banner = ({ image }) => {
   return (
     <>
       <div className="container-banner">
