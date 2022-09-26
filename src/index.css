@@ -18,6 +18,10 @@ a {
   color: #FFF;
 }
 
+strong {
+  color: #91CB00;
+}
+
 .font-size-title {
   font-size: 25px;
   font-weight: bold;
@@ -115,8 +119,15 @@ a {
 .container-title {
   text-align: center;
 }
+
+.welcome-title {
+  font-size: 40px;
+  color: #91CB00;
+}
+
 .container-cards {
   width: 100%;
+  margin-top: -120px;
   height: auto;
   display: flex;
   justify-content: center;
@@ -137,7 +148,8 @@ a {
 }
 
 .card img {
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   width: 100%;
   height: 100%;
 }
@@ -145,8 +157,14 @@ a {
 .about-me {
   width: 50%;
   height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
   display: flex;
   align-items: center;
+}
+
+.about-me-subtitle, .about-me-subtitle strong {
+  letter-spacing: 5px;
 }
 
 .info-victor {
@@ -154,12 +172,48 @@ a {
   padding-left: 15px;
 }
 
-.info-victor h2 {
-  font-size: 30px;
+#my-stack {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.container-stack {
+  width: 70%;
+  height: auto;
+  background-color: rgba(26,26,26,.6);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.container-stack h2 {
   color: #91CB00;
 }
 
+.container-stack-imgs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+.front-end, .back-end {
+  width: 50%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(26,26,26,.6);
+}
 
+.stack-logo {
+  width: 70px;
+  height: 70px;
+  margin: 10px;
+}
+
+.stack-logo img {
+  width: 100%;
+  height: 100%;
+}
 
 
 
