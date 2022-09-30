@@ -36,6 +36,10 @@ strong {
   align-items: center;
 }
 
+.container-section-title h2 {
+  text-align: center;
+}
+
 .header {
   width: 85%;
   height: 135px;

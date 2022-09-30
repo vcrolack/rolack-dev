@@ -35,8 +35,10 @@ export const Portfolio = () => {
   return (
     <div className='container'>
       <Banner image={banner} />
+      <div className="container-section-title">
+        <h2 classname='title-section'>Portfolio</h2>
+      </div>
       <section id='projects'>
-        <h2>Portfolio</h2>
         {projects.map((project, index) => {
           return (
           <Project 
