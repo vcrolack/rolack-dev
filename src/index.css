@@ -265,6 +265,7 @@ strong {
   width: 200px;
   height: 50px;
   border-radius: 10px;
+  cursor: pointer;
   background-color: #91CB00;
   border: none;
   font-size: 20px;
