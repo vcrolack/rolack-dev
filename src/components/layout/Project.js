@@ -6,7 +6,7 @@ export const Project = ({githubUrl, name, description, img}) => {
   return (
     <div className='project-card'>
       <div className="container-img-project">
-        <img src={img} alt='An image about the project'/>
+        <img src={img} alt='An  about the project'/>
       </div>
       <div className="info-project">
         <div className="container-title">
