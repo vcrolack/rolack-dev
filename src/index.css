@@ -175,7 +175,12 @@ strong {
   padding-right: 15px;
   padding-left: 15px;
 }
-
+.btn-curriculum {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
 #my-stack {
   margin-bottom: 50px;
   display: flex;

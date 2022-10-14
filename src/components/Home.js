@@ -47,8 +47,8 @@ export const Home = () => {
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum nemo aperiam maiores sed ipsam assumenda ullam! Blanditiis, totam facilis, neque ipsa vitae, labore repellat ut saepe dicta tempore suscipit. Voluptate?</p>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa id odio commodi omnis, deleniti at quaerat corporis nisi laborum quibusdam ut eveniet velit sint expedita dolorum molestias, distinctio fugiat? Saepe!</p>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis nesciunt est perspiciatis ipsam aut error deserunt tenetur incidunt quia, quibusdam tempora beatae, mollitia molestiae, assumenda repudiandae quos voluptates exercitationem similique.</p>
-                <div className="btn-container">
-                  <button onClick={ () => handleDownload('http://localhost:3000/curriculum.pdf', 'curriculum.pdf')}>Download!</button>
+                <div className="btn-curriculum">
+                  <button className='btn' onClick={ () => handleDownload('http://localhost:3000/curriculum.pdf', 'curriculum.pdf')}>My curriculum</button>
                 </div>
               </div>
             </div>
