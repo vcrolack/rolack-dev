@@ -1,4 +1,6 @@
 import React from 'react'
+import axios from 'axios'
+import fileDownload from 'js-file-download'
 import { Banner } from './layout/Banner'
 import { Title } from './layout/Title'
 import { StackLogo } from './layout/StackLogo'
@@ -14,7 +16,21 @@ import MySQL from './../assets/stackLogos/MySQL.svg'
 import SQLServer from './../assets/stackLogos/SQLServer.svg'
 import NodeJS from './../assets/stackLogos/NodeJS.svg'
 
+
 export const Home = () => {
+
+  const handleDownload = (url, filename) => {
+    axios.get(url, {
+      responseType:'blob'
+    })
+      .then(
+        res => {
+          fileDownload(res.data, filename)
+        }
+      )
+  }
+
+
   return (
     <div className='container'>
       <Banner image={bannerHome}/>
@@ -31,6 +47,9 @@ export const Home = () => {
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum nemo aperiam maiores sed ipsam assumenda ullam! Blanditiis, totam facilis, neque ipsa vitae, labore repellat ut saepe dicta tempore suscipit. Voluptate?</p>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa id odio commodi omnis, deleniti at quaerat corporis nisi laborum quibusdam ut eveniet velit sint expedita dolorum molestias, distinctio fugiat? Saepe!</p>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis nesciunt est perspiciatis ipsam aut error deserunt tenetur incidunt quia, quibusdam tempora beatae, mollitia molestiae, assumenda repudiandae quos voluptates exercitationem similique.</p>
+                <div className="btn-container">
+                  <button onClick={ () => handleDownload('http://localhost:3000/curriculum.pdf', 'curriculum.pdf')}>Download!</button>
+                </div>
               </div>
             </div>
           </div>
