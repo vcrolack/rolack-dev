@@ -1,10 +1,10 @@
 import React from 'react'
 
-export const Input = ({labelText, type}) => {
+export const Input = ({labelText, type, name}) => {
   return (
     <div className="container-input">
     <label htmlFor="">{labelText}</label>
-    <input type={type} />
+    <input name={name} type={type} />
   </div>
   )
 }
