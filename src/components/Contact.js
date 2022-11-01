@@ -20,10 +20,10 @@ export const Contact = () => {
 
     emailjs
       .sendForm(
-        'service_5p2lhx8',
-        'template_q78u6b5',
+        process.env.REACT_APP_EMAIL_SERVICE,
+        process.env.REACT_APP_TEMPLATE_ID,
         form.current,
-        'iW8PfFE5ZLF0NkNz8'
+        process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -35,24 +35,7 @@ export const Contact = () => {
       );
   };
 
-  // const encode = (data) => {
-  //   return Object.keys(data)
-  //     .map(
-  //       (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-  //     )
-  //     .join("&");
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   fetch("/", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //     body: encode({ "form-name": "contact-form", name, email, message }),
-  //   })
-  //     .then(() => alert("Message sent!"))
-  //     .catch((err) => alert(err));
-  // };
+  
 
   return (
     <div className="container">
