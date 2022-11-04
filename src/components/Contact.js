@@ -1,41 +1,72 @@
 import React from "react";
 import { useState, useRef } from "react";
 
-import emailjs from "@emailjs/browser";
-
+import { useForm } from "../hooks/useForm";
 import { Banner } from "./layout/Banner";
 import { Input } from "./layout/Input";
 import { Textarea } from "./layout/Textarea";
+import { Loader } from "./layout/Loader";
 
 import banner from "../assets/img/banner/banner-home.jpg";
+import { Message } from "./layout/Message";
+
+const initialForm = {
+  to_name: '',
+  to_email: '',
+  message: ''
+}
+
+const validationsForm = (form) => {
+  let errors = {};
+  const regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+  const regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
+  const regexMessage = /^.{1,255}$/;
+
+  if (!form.to_name.trim()) {
+    errors.to_name = 'Name is required'
+  } else if (!regexName.test(form.to_name.trim())) {
+    errors.to_name = 'Name only accpets letters and blanks';
+  }
+
+  if (!form.to_email.trim()) {
+    errors.to_email = 'Email is required'
+  } else if (!regexEmail.test(form.to_email.trim())) {
+    errors.to_email = 'Write a valid email'
+  }
+
+  if (!form.message.trim()) {
+    errors.message = 'Message is required'
+  } else if (!regexMessage.test(form.message.trim())) {
+    errors.message = 'The message can not have more of 255 characters'
+  }
+
+  return errors;
+}
 
 export const Contact = () => {
+  const {
+    form,
+    errors,
+    loading,
+    response,
+    handleChange,
+    handleBlur,
+    handleSubmit,
+  } = useForm(initialForm, validationsForm)
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const form = useRef();
+  const [isValid, setIsValid] = useState(false);
+  const sendForm = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_EMAIL_SERVICE,
-        process.env.REACT_APP_TEMPLATE_ID,
-        form.current,
-        process.env.REACT_APP_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
+
   };
 
-  
+
 
   return (
     <div className="container">
@@ -48,31 +79,52 @@ export const Contact = () => {
         </div>
         <div className="container-contact">
           <div className="card-contact">
-            <form ref={form} onSubmit={sendEmail} name="contact-form" action="">
+            <form ref={sendForm} onSubmit={(e) => handleSubmit(e, sendForm)} name="contact-form" action="">
               <div className="inputs">
                 <div className="container-info-contact">
                   <Input
-                    onChange={(e) => setName(e.targe.value)}
+                    placeholder="Josh"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
                     type="text"
                     labelText="Name"
                     name="to_name"
+                    value={form.name}
+                    isRequired={true}
                   />
+                  <div className="error-container">
+                    {errors.to_name && <p className="error">{errors.to_name}</p>}
+                  </div>
                   <Input
-                    onChange={(e) => setEmail(e.target.value)}
-                    type="text"
+                    placeholder="example@example.com"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    type="email"
                     labelText="Email"
                     name="to_email"
+                    value={form.email}
+                    isRequired={true}
                   />
+                  <div className="error-container">
+                    {errors.to_email && <p className="error">{errors.to_email}</p>}
+                  </div>
                 </div>
                 <div className="container-message">
                   <Textarea
-                    onChange={(e) => setMessage(e.target.value)}
+                    placeholder="Hi, I'm ..."
+                    onChange={handleChange}
+                    onBlur={handleBlur}
                     type="text"
                     labelText="Message"
                     rows="7"
                     cols="50"
                     name="message"
+                    value={form.message}
+                    isRequired={true}
                   />
+                  <div className="error-container">
+                    {errors.message && <p className="error">{errors.message}</p>}
+                  </div>
                 </div>
               </div>
               <div className="submit-container">
@@ -81,6 +133,10 @@ export const Contact = () => {
                 </button>
               </div>
             </form>
+            <div className="loader-container">
+              {loading && <Loader />}
+              {response && <Message msg={'Message sent successfully'} fontColor={"#91CB00"}/>}
+            </div>
           </div>
         </div>
       </section>

@@ -47,10 +47,21 @@ textarea {
   outline: none;
   caret-color: #91CB00;
   color: #FFF;
+  resize: none;
   font-size: 18px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
+}
+
+.error-container {
+  height: 20px;
+  margin: 20px 0;
+}
+
+.error {
+  font-weight: bold;
+  color: #DC3545;
 }
 
 .font-size-title {
@@ -460,4 +471,44 @@ form {
 .footer-container .social-networks svg:hover {
   color: #91CB00;
   cursor: pointer;
+}
+
+.loader-container {
+  height: 52px;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60px;
+  height: 50px;
+}
+
+.loader div {
+  width: 12px;
+  background: #91CB00;
+  animation: loader 1.8s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+      height: 12px;
+  }
+  25% {
+      height: 50px;
+  }
+  50% {
+      height: 10px;
+  }
+  75% {
+      height: 25px;
+  }
+  100% {
+      height: 12px;
+  }
+}
+
+.loader div:nth-child(2) {
+  animation-delay: -0.25s;
 }
