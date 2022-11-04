@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 
 import { useForm } from "../hooks/useForm";
 import { Banner } from "./layout/Banner";
@@ -54,19 +54,7 @@ export const Contact = () => {
     handleSubmit,
   } = useForm(initialForm, validationsForm)
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [isValid, setIsValid] = useState(false);
   const sendForm = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-
-  };
-
-
 
   return (
     <div className="container">
@@ -128,7 +116,7 @@ export const Contact = () => {
                 </div>
               </div>
               <div className="submit-container">
-                <button className="btn" type="submit">
+                <button className='btn' type="submit">
                   Send
                 </button>
               </div>
