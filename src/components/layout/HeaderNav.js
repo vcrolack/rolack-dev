@@ -38,7 +38,7 @@ export const HeaderNav = () => {
                 <NavLink
                   to="/home"
                   className={({ isActive }) =>
-                    isActive ? "activated" + burgerClass : ""
+                    isActive ? "activated"  : ""
                   }
                 >
                   Home
