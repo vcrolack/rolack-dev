@@ -8,9 +8,8 @@ export const HeaderNav = () => {
   const [burgerClass, setBurgerClass] = useState("burger-bar unclicked");
   const [menuClass, setMenuClass] = useState("menu hidden");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
 
-  const { width, height } = useScreenSize();
+  const { width } = useScreenSize();
 
   console.log(width);
 
@@ -24,12 +23,6 @@ export const HeaderNav = () => {
     }
 
     setIsMenuClicked(!isMenuClicked);
-  };
-
-  const sizeHandle = () => {
-    if (width < 767) {
-      setIsMobile(true);
-    }
   };
 
   return (
