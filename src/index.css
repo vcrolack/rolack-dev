@@ -28,6 +28,10 @@ label {
   margin-bottom: 5px;
 }
 
+hr {
+  border-color: #91CB00;
+}
+
 input {
   width: 300px;
   height: 30px;
@@ -84,6 +88,81 @@ textarea {
 
 .container-section-title h2 {
   text-align: center;
+}
+
+.burger-menu {
+  width: 85%;
+  margin-right: 20px;
+  background-color: #1A1A1A;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.burger-bar {
+  width: 4em;
+  height: 0.5em;
+  margin-bottom: 0.5em;
+  background-color: #91CB00;
+  border-radius: 0.5em;
+}
+
+.menu {
+  width: 100%;
+  height: 70vh;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #1A1A1A;
+  position:absolute;
+  top: 0;
+  z-index: -1;
+
+  display: flex;
+  align-items: center;
+}
+
+.menu ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.menu ul li {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  width: 100%;
+  display: inherit;
+}
+
+.burger-bar.clicked:nth-child(1) {
+  transform: rotate(45deg) translate(0.75em, 1.25em);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(2) {
+  transform: scale(0);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3) {
+  transform: rotate(135deg) translate(-0.5em, 1em);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.unclicked {
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
 }
 
 .header {
@@ -601,5 +680,53 @@ form {
 }
 
 @media screen and (max-width: 767px) {
+  .logo {
+    width: 500px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .logo svg {
+    width: 100%;
+  }
 
+  .container-cards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    display: block;
+  }
+
+  .container-img-victor {
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+
+  .card img {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    object-fit: cover;
+  }
+
+  .about-me {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn-curriculum {
+    margin-bottom: 20px;
+  }
+
+  .front-end, .back-end {
+    width: 100%;
+  }
+
+  .container-stack-img {
+    width: 100%;
+  }
 }
