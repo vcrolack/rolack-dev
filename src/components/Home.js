@@ -44,11 +44,12 @@ export const Home = () => {
               <div className="info-victor">
                 <h2 className='welcome-title'>Welcome!</h2>
                 <h2 className='about-me-subtitle'>My name is <strong>Víctor Rolack</strong>,<br /><strong>full stack developer</strong></h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum nemo aperiam maiores sed ipsam assumenda ullam! Blanditiis, totam facilis, neque ipsa vitae, labore repellat ut saepe dicta tempore suscipit. Voluptate?</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa id odio commodi omnis, deleniti at quaerat corporis nisi laborum quibusdam ut eveniet velit sint expedita dolorum molestias, distinctio fugiat? Saepe!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis nesciunt est perspiciatis ipsam aut error deserunt tenetur incidunt quia, quibusdam tempora beatae, mollitia molestiae, assumenda repudiandae quos voluptates exercitationem similique.</p>
+                <p>Hello there! I’m a young man with 24 years old that is finishing his studies	 in software engineer at the house of studies Duoc UC, located in Santiago of Chile; yes, I’m from Chile. I’ve been coding since 2019, that’s when I met this beautiful world. In this moment I focus in keep improving my full stack skills.</p>
+                <p>About my laboral experience, I had a job for three months in a chilean start up called Tyne, which is focused to eliminate queues of customers from restaurants. I was performing tasks about development with Angular and Fast API, a framework web of Python.  After that, I started a new position at Falabella Technology and today my position is associated software engineer. At present I development support tasks with Ruby and developments with ReactJS. </p>
+                <p>I have several hobbies, among them, study, the feeling of acquiring more knowledge satisfies me, so my next steps will learn more about Node JS and his tools, and cloud services. Other passions of mine are videogames, but single players games because  I enjoy a good history in solitaire.  And finally, but the most important, I love spend time with my girlfriend, everything is more beautiful with her, she is the greatest blessing God gave me.</p>
+                <p>Well, thanks for reading. I invite you to download my resume to learn more about my background. My best regards!</p>
                 <div className="btn-curriculum">
-                  <button className='btn' onClick={ () => handleDownload('http://localhost:3000/curriculum.pdf', 'curriculum.pdf')}>My curriculum</button>
+                  <button className='btn' onClick={ () => handleDownload('http://localhost:3000/curriculum.pdf', 'curriculum.pdf')}>My resume</button>
                 </div>
               </div>
             </div>
