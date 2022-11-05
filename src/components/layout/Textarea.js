@@ -10,7 +10,7 @@ export const Textarea = ({
   onBlur,
   isRequired,
   value,
-  placeholder
+  placeholder,
 }) => {
   return (
     (isRequired && (

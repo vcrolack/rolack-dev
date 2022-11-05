@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
-export const Text = ({text}) => {
-  return (
-    <p>{text}</p>
-  )
-}
+export const Text = ({ text }) => {
+  return <p>{text}</p>;
+};

@@ -8,7 +8,7 @@ export const Input = ({
   value,
   onChange,
   onBlur,
-  placeholder
+  placeholder,
 }) => {
   return (
     (isRequired && (
@@ -27,7 +27,7 @@ export const Input = ({
     )) || (
       <div className="container-input">
         <label htmlFor="">{labelText}</label>
-        <input 
+        <input
           onChange={onChange}
           onBlur={onBlur}
           name={name}

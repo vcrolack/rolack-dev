@@ -41,7 +41,6 @@ export const useForm = (initialForm, validateForm) => {
           setTimeout(() => {
             setResponse(false);
           }, 3000);
-
         },
         (error) => {
           console.log(error);

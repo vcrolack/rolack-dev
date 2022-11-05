@@ -1,14 +1,13 @@
+import React from "react";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { Routes } from "./Router/Routes";
 
-import React from 'react';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { Routes } from './Router/Routes';
-
-library.add(fab)
+library.add(fab);
 
 function App() {
   return (
-    <div className='layout'>
+    <div className="layout">
       <Routes />
     </div>
   );

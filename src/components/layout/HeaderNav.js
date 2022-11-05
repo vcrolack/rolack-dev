@@ -37,9 +37,7 @@ export const HeaderNav = () => {
               <li>
                 <NavLink
                   to="/home"
-                  className={({ isActive }) =>
-                    isActive ? "activated"  : ""
-                  }
+                  className={({ isActive }) => (isActive ? "activated" : "")}
                 >
                   Home
                 </NavLink>

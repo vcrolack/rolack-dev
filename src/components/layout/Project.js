@@ -1,12 +1,12 @@
-import React from 'react'
-import { Title } from './Title' 
-import { Text } from './Text'
+import React from "react";
+import { Title } from "./Title";
+import { Text } from "./Text";
 
-export const Project = ({githubUrl, name, description, img}) => {
+export const Project = ({ githubUrl, name, description, img }) => {
   return (
-    <div className='project-card'>
+    <div className="project-card">
       <div className="container-img-project">
-        <img src={img} alt='An  about the project'/>
+        <img src={img} alt="An  about the project" />
       </div>
       <div className="info-project">
         <div className="container-title">
@@ -16,9 +16,11 @@ export const Project = ({githubUrl, name, description, img}) => {
           <Text text={description} />
         </div>
         <div className="btn-container">
-          <a target='_blank' href={githubUrl}><button className='btn'>Open</button></a>
+          <a target="_blank" href={githubUrl}>
+            <button className="btn">Open</button>
+          </a>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

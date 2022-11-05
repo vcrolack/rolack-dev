@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export const Title = ({ text }) => {
   return (
     <>
-      <p className='font-size-title'>{text}</p>
+      <p className="font-size-title">{text}</p>
     </>
-  )
-}
+  );
+};
