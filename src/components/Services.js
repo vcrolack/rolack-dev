@@ -6,6 +6,8 @@ import { Banner } from "./layout/Banner";
 import { Service } from "./layout/Service";
 
 export const Services = () => {
+  const frontList = ["High fidelity mockups", "Programming interfaces", "Creat a great experience"];
+  const backList = ["API rest", "Database model", "Authentication service"]
   return (
     <div className="container">
       <Banner image={banner} />
@@ -16,16 +18,18 @@ export const Services = () => {
         <Service
           type={"Front-end"}
           description={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet nisl tempor, semper est non, iaculis orci. Aliquam erat volutpat. Fusce efficitur dui vel diam ultrices luctus. Pellentesque iaculis vulputate augue, vitae fringilla est. Fusce et risus pharetra, euismod turpis a, volutpat est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec vestibulum tellus eget finibus placerat. Pellentesque ut dignissim nisi, non interdum diam. "
+            "In the front-end area I have skills from the design of the application to its programming. To design I use Adobe XD to create high fidelity mockups. To bring the application to life, I use ReactJS library to create a user-friendly interface and an unforgettable user experience. For styling I use Bootstrap and SCSS to create eye-catching and pleasant interfaces."
           }
           icon={ReactLogo}
+          list={frontList}
         />
         <Service
           type={"Back-end"}
           description={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet nisl tempor, semper est non, iaculis orci. Aliquam erat volutpat. Fusce efficitur dui vel diam ultrices luctus. Pellentesque iaculis vulputate augue, vitae fringilla est. Fusce et risus pharetra, euismod turpis a, volutpat est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec vestibulum tellus eget finibus placerat. Pellentesque ut dignissim nisi, non interdum diam. "
+            "In the back-end area I am skilled in the development of a rest API with database modeling for engines such as MySQL and SQL Server with different tools, such as Express, Django and Fast API."
           }
           icon={Django}
+          list={backList}
         />
       </section>
     </div>

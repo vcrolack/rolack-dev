@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Service = ({ type, description, icon }) => {
+export const Service = ({ type, description, icon, list }) => {
   return (
     <div className="service-container">
       <div className="container-left-block">
@@ -14,6 +14,11 @@ export const Service = ({ type, description, icon }) => {
       <div className="container-right-block">
         <div className="description-service">
           <p>{description}</p>
+          {list.map((item, index) => {
+            return (
+              <li>{item}</li>
+            )
+          })}
         </div>
       </div>
     </div>
