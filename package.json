@@ -1,5 +1,6 @@
 {
   "name": "portfolio-rolack",
+  "homepage": "http://rolackdev.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
