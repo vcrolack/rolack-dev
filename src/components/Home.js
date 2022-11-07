@@ -80,7 +80,7 @@ export const Home = () => {
                     className="btn"
                     onClick={() =>
                       handleDownload(
-                        "rolackdev.com/curriculum.pdf",
+                        "/curriculum.pdf",
                         "resume.pdf"
                       )
                     }
