@@ -81,7 +81,7 @@ export const Home = () => {
                     onClick={() =>
                       handleDownload(
                         "www.rolackdev.com/curriculum.pdf",
-                        "curriculum.pdf"
+                        "resume.pdf"
                       )
                     }
                   >
