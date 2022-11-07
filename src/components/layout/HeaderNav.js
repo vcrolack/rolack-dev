@@ -11,8 +11,6 @@ export const HeaderNav = () => {
 
   const { width } = useScreenSize();
 
-  console.log(width);
-
   const updateMenu = () => {
     if (!isMenuClicked) {
       setBurgerClass("burger-bar clicked");
