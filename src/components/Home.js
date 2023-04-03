@@ -38,7 +38,7 @@ export const Home = () => {
             </div>
             <div className="about-me">
               <div className="info-victor">
-                <h2 className="welcome-title">Welcome!</h2>
+                <h2 className="welcome-title">W E L C O M E</h2>
                 <h2 className="about-me-subtitle">
                   My name is <strong>Víctor Rolack</strong>,<br />
                   <strong>full stack developer</strong>
