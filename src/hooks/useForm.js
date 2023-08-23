@@ -29,7 +29,7 @@ export const useForm = (initialForm, validateForm) => {
         process.env.REACT_APP_EMAIL_SERVICE,
         process.env.REACT_APP_TEMPLATE_ID,
         sendForm.current,
-        'peru'
+        process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -39,8 +39,8 @@ export const useForm = (initialForm, validateForm) => {
           form.message = "";
 
           setMessageResponse({
-            message:'Message sent successfully',
-            color: '#91CB00'
+            message: "Message sent successfully",
+            color: "#91CB00",
           });
 
           setTimeout(() => {
@@ -50,21 +50,21 @@ export const useForm = (initialForm, validateForm) => {
         (error) => {
           console.log(error);
           setLoading(false);
-        setResponse(true);
-        setMessageResponse({
-          message: 'An error has occurred',
-          color: '#DC3545'
-        });
+          setResponse(true);
+          setMessageResponse({
+            message: "An error has occurred",
+            color: "#DC3545",
+          });
 
-        target.reset();
-        form.message = "";
+          target.reset();
+          form.message = "";
 
-        setTimeout(() => {
-          setResponse(false);
-        }, 3000);
+          setTimeout(() => {
+            setResponse(false);
+          }, 3000);
         }
       )
-      .catch(e => {
+      .catch((e) => {
         console.log(e.message);
       });
   };
