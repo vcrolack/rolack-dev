@@ -51,6 +51,7 @@ export const Contact = () => {
     errors,
     loading,
     response,
+    messageResponse,
     handleChange,
     handleBlur,
     handleSubmit,
@@ -155,8 +156,8 @@ export const Contact = () => {
               {loading && <Loader />}
               {response && (
                 <Message
-                  msg={"Message sent successfully"}
-                  fontColor={"#91CB00"}
+                  msg={messageResponse.message}
+                  fontColor={messageResponse.color}
                 />
               )}
             </div>

@@ -7,6 +7,7 @@ export const useForm = (initialForm, validateForm) => {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
+  const [messageResponse, setMessageResponse] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,15 +29,19 @@ export const useForm = (initialForm, validateForm) => {
         process.env.REACT_APP_EMAIL_SERVICE,
         process.env.REACT_APP_TEMPLATE_ID,
         sendForm.current,
-        process.env.REACT_APP_PUBLIC_KEY
+        'peru'
       )
       .then(
         (result) => {
-          console.log(result.text);
           setLoading(false);
           setResponse(true);
           target.reset();
           form.message = "";
+
+          setMessageResponse({
+            message:'Message sent successfully',
+            color: '#91CB00'
+          });
 
           setTimeout(() => {
             setResponse(false);
@@ -44,8 +49,24 @@ export const useForm = (initialForm, validateForm) => {
         },
         (error) => {
           console.log(error);
+          setLoading(false);
+        setResponse(true);
+        setMessageResponse({
+          message: 'An error has occurred',
+          color: '#DC3545'
+        });
+
+        target.reset();
+        form.message = "";
+
+        setTimeout(() => {
+          setResponse(false);
+        }, 3000);
         }
-      );
+      )
+      .catch(e => {
+        console.log(e.message);
+      });
   };
 
   const handleSubmit = (e, sendForm) => {
@@ -63,6 +84,7 @@ export const useForm = (initialForm, validateForm) => {
     errors,
     loading,
     response,
+    messageResponse,
     handleChange,
     handleBlur,
     handleSubmit,
