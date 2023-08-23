@@ -15,7 +15,6 @@ export const Footer = () => {
           <a target="_blank" href="https://www.linkedin.com/in/rolack-victor/">
             <FontAwesomeIcon size="3x" icon={["fab", "linkedin"]} />
           </a>
-          <FontAwesomeIcon size="3x" icon={["fab", "twitter"]} />
         </div>
       </div>
     </div>

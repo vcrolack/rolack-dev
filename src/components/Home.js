@@ -44,36 +44,10 @@ export const Home = () => {
                   <strong>full stack developer</strong>
                 </h2>
                 <p>
-                  Hello there! I’m a young man with 24 years old that is
-                  finishing his studies in software engineer at the house of
-                  studies Duoc UC, located in Santiago of Chile; yes, I’m from
-                  Chile. I’ve been coding since 2019, that’s when I met this
-                  beautiful world. In this moment I focus in keep improving my
-                  full stack skills.
-                </p>
-                <p>
-                  About my laboral experience, I had a job for three months in a
-                  chilean start up called Tyne, which is focused to eliminate
-                  queues of customers from restaurants. I was performing tasks
-                  about development with Angular and Fast API, a framework web
-                  of Python. After that, I started a new position at Falabella
-                  Technology and today my position is associated software
-                  engineer. At present I development support tasks with Ruby and
-                  developments with ReactJS.{" "}
-                </p>
-                <p>
-                  I have several hobbies, among them, study, the feeling of
-                  acquiring more knowledge satisfies me, so my next steps will
-                  learn more about Node JS and his tools, and cloud services.
-                  Other passions of mine are videogames, but single players
-                  games because I enjoy a good history in solitaire. And
-                  finally, but the most important, I love spend time with my
-                  girlfriend, everything is more beautiful with her, she is the
-                  greatest blessing God gave me.
-                </p>
-                <p>
-                  Well, thanks for reading. I invite you to download my resume
-                  to learn more about my background. My best regards!
+                Hello! I'm a 24-year-old software engineering student from Chile's Duoc UC, passionate about coding since 2019. I'm focused on enhancing 
+                my full stack skills and have experience with Angular, Fast API, and ReactJS. I worked at Tyne, a Chilean startup, and currently, 
+                as an Associate Software Engineer at Falabella Technology. I'm also keen on learning Node.js. Feel free to check my resume for more 
+                information. Thank you for reading!
                 </p>
                 <div className="btn-curriculum">
                   <button
