@@ -2,8 +2,8 @@ import React from "react";
 import banner from "../assets/img/banner/banner-home.jpg";
 import ReactLogo from "../assets/stackLogos/ReactLogo.svg";
 import Django from "../assets/stackLogos/Django.svg";
-import { Banner } from "./layout/Banner";
-import { Service } from "./layout/Service";
+import { Banner } from "./components/Banner";
+import { Service } from "./components/Service";
 
 export const Services = () => {
   const frontList = ["High fidelity mockups", "Programming interfaces", "Creat a great experience"];

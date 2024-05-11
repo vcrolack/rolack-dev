@@ -1,6 +1,6 @@
 import React from "react";
-import { Banner } from "./layout/Banner";
-import { Project } from "./layout/Project";
+import { Banner } from "./components/Banner";
+import { Project } from "./components/Project";
 import banner from "./../assets/img/banner/banner-home.jpg";
 import freeMovies from "./../assets/img/projects/free_movies.png";
 import cesfamBackend from "./../assets/img/projects/cesfam_backend.png";

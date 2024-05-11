@@ -1,20 +1,20 @@
 import React from "react";
 import axios from "axios";
 import fileDownload from "js-file-download";
-import { Banner } from "./layout/Banner";
-import { Title } from "./layout/Title";
-import { StackLogo } from "./layout/StackLogo";
-import bannerHome from "./../assets/img/banner/banner-home.jpg";
-import victor from "./../assets/img/I.jpeg";
-import TypeScript from "./../assets/stackLogos/TypeScript.svg";
-import Sass from "./../assets/stackLogos/Sass.svg";
-import ReactLogo from "./../assets/stackLogos/ReactLogo.svg";
-import Bootstrap from "./../assets/stackLogos/Bootstrap.svg";
-import Python from "./../assets/stackLogos/Python.svg";
-import Django from "./../assets/stackLogos/Django.svg";
-import MySQL from "./../assets/stackLogos/MySQL.svg";
-import SQLServer from "./../assets/stackLogos/SQLServer.svg";
-import NodeJS from "./../assets/stackLogos/NodeJS.svg";
+
+import { Banner, Title, StackLogo } from "../components";
+import { bannerHome, victor } from "../../assets/img";
+import { 
+  TypeScript,
+  Sass,
+  ReactLogo,
+  Bootstrap,
+  Python,
+  Django,
+  MySQL,
+  SQLServer,
+  NodeJS
+ } from "../../assets/stackLogos";
 
 export const Home = () => {
   const handleDownload = (url, filename) => {

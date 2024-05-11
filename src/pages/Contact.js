@@ -2,11 +2,11 @@ import React from "react";
 import { useRef } from "react";
 
 import { useForm } from "../hooks/useForm";
-import { Banner } from "./layout/Banner";
-import { Input } from "./layout/Input";
-import { Textarea } from "./layout/Textarea";
-import { Loader } from "./layout/Loader";
-import { Message } from "./layout/Message";
+import { Banner } from "./components/Banner";
+import { Input } from "./components/Input";
+import { Textarea } from "./components/Textarea";
+import { Loader } from "./components/Loader";
+import { Message } from "./components/Message";
 
 import { useScreenSize } from "../hooks/useScreenSize";
 
