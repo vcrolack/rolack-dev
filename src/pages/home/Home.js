@@ -2,19 +2,9 @@ import React from "react";
 import axios from "axios";
 import fileDownload from "js-file-download";
 
-import { Banner, Title, StackLogo } from "../components";
+import { Banner } from "../components";
 import { bannerHome, victor } from "../../assets/img";
-import { 
-  TypeScript,
-  Sass,
-  ReactLogo,
-  Bootstrap,
-  Python,
-  Django,
-  MySQL,
-  SQLServer,
-  NodeJS
- } from "../../assets/stackLogos";
+import { Technologies } from "./technologies/Technologies";
 
 export const Home = () => {
   const handleDownload = (url, filename) => {
@@ -67,38 +57,7 @@ export const Home = () => {
           </div>
         </div>
       </section>
-      <section id="my-stack">
-        <div className="container-title">
-          <Title text="MY STACK" />
-        </div>
-        <div id="technologies" className="container-stack">
-          <h2>Front-end</h2>
-          <div className="container-stack-imgs">
-            <div className="front-end">
-              <StackLogo
-                logo={TypeScript}
-                page="https://www.typescriptlang.org/"
-              />
-              <StackLogo logo={Sass} page="https://sass-lang.com/page/" />
-              <StackLogo logo={ReactLogo} page="https://reactjs.org/" />
-              <StackLogo logo={Bootstrap} page="https://getbootstrap.com/" />
-            </div>
-          </div>
-          <h2>Back-end</h2>
-          <div className="container-stack-imgs">
-            <div className="back-end">
-              <StackLogo logo={Python} page="https://www.python.org/" />
-              <StackLogo logo={Django} page="https://www.djangoproject.com/" />
-              <StackLogo logo={MySQL} page="https://www.mysql.com/" />
-              <StackLogo
-                logo={SQLServer}
-                page="microsoft.com/en-us/sql-server/sql-server-downloads"
-              />
-              <StackLogo logo={NodeJS} page="https://nodejs.org/en/" />
-            </div>
-          </div>
-        </div>
-      </section>
+      <Technologies />
     </div>
   );
 };
