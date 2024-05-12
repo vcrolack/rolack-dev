@@ -25,6 +25,12 @@ import GraphQL from "./../../assets/stackLogos/GraphQL.svg";
 import Docker from "./../../assets/stackLogos/Docker.svg";
 import Firebase from "./../../assets/stackLogos/Firebase.svg";
 import AWS from "./../../assets/stackLogos/AWS.svg";
+import VSCode from "./../../assets/stackLogos/VSCode.svg";
+import Postman from "./../../assets/stackLogos/Postman.svg";
+import Figma from "./../../assets/stackLogos/Figma.svg";
+import XD from "./../../assets/stackLogos/XD.svg";
+import Jira from "./../../assets/stackLogos/Jira.svg";
+import Git from "./../../assets/stackLogos/Git.svg";
 
 export {
   TypeScript,
@@ -54,4 +60,11 @@ export {
   Docker,
   Firebase,
   AWS,
+  VSCode,
+  Postman,
+  Figma,
+  XD,
+  Jira,
+  Git,
+
 }
