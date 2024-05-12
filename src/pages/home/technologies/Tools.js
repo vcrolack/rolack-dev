@@ -18,7 +18,7 @@ export const Tools = () => {
       <h2>Tools</h2>
       <div className="container-stack-imgs">
         <div className="front-end">
-          { stack.map(tech => (<StackLogo logo={tech.logo} page={tech.page} />)) }
+          { stack.map((tech, index) => (<StackLogo key={index}  logo={tech.logo} page={tech.page} />)) }
         </div>
       </div>
     </>

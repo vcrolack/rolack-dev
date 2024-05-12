@@ -16,7 +16,6 @@ import {
   Docker,
   Firebase,
   AWS,
-  TypeScript,
 } from "../../../assets/stackLogos";
 import { StackLogo } from "../../components";
 
@@ -45,7 +44,7 @@ export const Backend = () => {
       <h2>Back-end</h2>
       <div className="container-stack-imgs">
         <div className="back-end">
-          { stack.map(tech => (<StackLogo logo={tech.logo} page={tech.page} /> )) }
+          { stack.map((tech, index) => (<StackLogo key={index} logo={tech.logo} page={tech.page} /> )) }
         </div>
       </div>
     </>
