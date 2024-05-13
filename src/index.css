@@ -268,7 +268,7 @@ textarea {
   justify-content: center;
 }
 .card {
-  width: 80%;
+  width: 60%;
   height: auto;
   border-radius: 10px;
   background-color: #1A1A1A;
@@ -297,6 +297,11 @@ textarea {
   padding-right: 10px;
   display: flex;
   align-items: center;
+}
+
+.p-about-me {
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 .about-me-subtitle, .about-me-subtitle strong {
