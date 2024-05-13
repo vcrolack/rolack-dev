@@ -3,14 +3,10 @@ import {
   Routes as ReactRoutes,
   Route,
   BrowserRouter,
-  NavLink,
 } from "react-router-dom";
-import { Home } from "../components/Home";
-import { Portfolio } from "../components/Portfolio";
-import { Services } from "../components/Services";
-import { Contact } from "../components/Contact";
-import { HeaderNav } from "../components/layout/HeaderNav";
-import { Footer } from "../components/layout/Footer";
+
+import { Home, Portfolio, Services, Contact } from "../pages";
+import { HeaderNav, Footer} from "../pages/components";
 
 export const Routes = () => {
   return (
