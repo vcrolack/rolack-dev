@@ -5,6 +5,7 @@ import fileDownload from "js-file-download";
 import { Banner } from "../components";
 import { bannerHome, victor } from "../../assets/img";
 import { Technologies } from "./technologies/Technologies";
+import { Experience } from "./experience/Experience";
 
 export const Home = () => {
   const handleDownload = (url, filename) => {
@@ -57,6 +58,7 @@ export const Home = () => {
           </div>
         </div>
       </section>
+      <Experience />
       <Technologies />
     </div>
   );
