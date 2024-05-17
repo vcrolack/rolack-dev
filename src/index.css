@@ -184,6 +184,7 @@ textarea {
   align-items: center;
   -webkit-box-shadow: -4px 25px 34px -9px rgba(0,0,0,0.41); 
   box-shadow: -4px 25px 34px -9px rgba(0,0,0,0.41);
+  z-index: 10;
 }
 
 .header .logo {
@@ -268,13 +269,11 @@ textarea {
   justify-content: center;
 }
 .card {
-  width: 60%;
+  width: 75%;
   height: auto;
   border-radius: 10px;
   background-color: #1A1A1A;
   display: flex;
-
-
 }
 
 .container-img-victor {
@@ -319,6 +318,101 @@ textarea {
   display: flex;
   justify-content: center;
 }
+
+#experience {
+  width: 100%;
+  padding: 30px 0 30px 0;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.container-experience {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  transition: transform 1s ease-in-out;
+}
+
+.experience-icon-left {
+  cursor: pointer;
+}
+
+.experience-icon-right {
+  cursor: pointer;
+}
+
+.experience-cards {
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  z-index: 1;
+}
+
+.card-experience {
+  width: 70rem;
+  margin: 40px 50px 40px 50px;
+  background-color: #202020;
+  -webkit-box-shadow: 0px 2px 10px -1px #030303; 
+  box-shadow: 0px 2px 10px -1px #91CB00;
+  transition: transform 1s ease-in-out;
+}
+
+.active-experience {
+  transform: scale(1.1);
+}
+
+.experience-content {
+  width: 50%;
+  padding: 0 50px 0 50px;
+}
+
+.experience-company {
+  font-size: 3rem;
+}
+
+.container-experience-technologies {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.experience-technologies {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.experience-technologies img {
+  border-radius: 0;
+}
+
+.workplace-image {
+  width: 50%;
+}
+
+.workplace-image img {
+  width: 100%;
+}
+
+.experience-controller {
+  margin: 30px 0 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.experience-bullet {
+  display: flex;
+  align-items: center;
+}
+
+.experience-bullet svg {
+  margin: 0 10px 0 10px;
+}
+
 #my-stack {
   margin-bottom: 50px;
   display: flex;
@@ -353,8 +447,6 @@ textarea {
 }
 
 .stack-logo {
-  width: 70px;
-  height: 70px;
   margin: 10px;
 }
 
@@ -661,6 +753,23 @@ form {
     margin-bottom: 20px;
   }
 
+  .card-experience {
+    width: 100%;
+    height: auto;
+  }
+
+  .experience-content {
+    width: auto;
+  }
+
+  .workplace-image {
+    width: 100%;
+  }
+  
+  .workplace-image img {
+    width: 100%;
+  }
+
   .front-end, .back-end {
     width: 90%;
   }
@@ -741,6 +850,35 @@ form {
 
   .btn-curriculum {
     margin-bottom: 20px;
+  }
+
+  .card-experience {
+    width: 90%;
+    height: auto;
+  }
+
+  .experience-content {
+    width: auto;
+  }
+
+  .container-experience-technologies {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .experience-technologies {
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .workplace-image {
+    width: 100%;
+  }
+  
+  .workplace-image img {
+    width: 100%;
   }
 
   .front-end, .back-end {

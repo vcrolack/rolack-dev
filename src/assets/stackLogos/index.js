@@ -31,6 +31,7 @@ import Figma from "./../../assets/stackLogos/Figma.svg";
 import XD from "./../../assets/stackLogos/XD.svg";
 import Jira from "./../../assets/stackLogos/Jira.svg";
 import Git from "./../../assets/stackLogos/Git.svg";
+import Azure from "./../../assets/stackLogos/Azure.svg";
 
 export {
   TypeScript,
@@ -66,5 +67,5 @@ export {
   XD,
   Jira,
   Git,
-
+  Azure,
 }
