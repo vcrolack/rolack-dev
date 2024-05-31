@@ -11,6 +11,7 @@ import {
   SQLServer,
   Sass,
   TypeScript,
+  Zod,
 } from "../../../assets/stackLogos";
 
 export const experienceData = [
@@ -42,7 +43,7 @@ export const experienceData = [
     role: "Consultant",
     taskDescription:
       "SOON...",
-    technologies: [ ReactLogo ],
+    technologies: [ ReactLogo, Sass, TypeScript, Zod ],
     startDate: "2024 may",
     endDate: "Present",
     logo: Amaris,
