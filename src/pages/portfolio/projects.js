@@ -53,7 +53,7 @@ export const projects = [
     description:
       "It's a project build in HTML, CSS and a framework called Bootstrap 5 for a practice design. It's a landing page for a pet adoption center, only for dogs and cats.",
     img: ayudaPeluda,
-    githubUrl: "https://github.com/vcrolack/rolachin",
+    githubUrl: "https://github.com/vcrolack/AyudaPeluda",
     stack: [Html5, Css, Bootstrap],
   },
 ];
