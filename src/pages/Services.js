@@ -1,18 +1,17 @@
 import React from "react";
-import banner from "../assets/img/banner/banner-home.jpg";
-import ReactLogo from "../assets/stackLogos/ReactLogo.svg";
-import Django from "../assets/stackLogos/Django.svg";
-import { Banner } from "./components/Banner";
-import { Service } from "./components/Service";
+
+import { bannerHome } from "../assets/img";
+import { ReactLogo, Django } from "../assets/stackLogos";
+import { Banner, Service } from "./components";
 
 export const Services = () => {
   const frontList = ["High fidelity mockups", "Programming interfaces", "Creat a great experience"];
   const backList = ["API rest", "Database model", "Authentication service"]
   return (
     <div className="container">
-      <Banner image={banner} />
+      <Banner image={bannerHome} />
       <div className="container-title">
-        <h2>Services</h2>
+        <h2>S E R V I C E S</h2>
       </div>
       <section id="services">
         <Service

@@ -33,6 +33,7 @@ import Jira from "./../../assets/stackLogos/Jira.svg";
 import Git from "./../../assets/stackLogos/Git.svg";
 import Azure from "./../../assets/stackLogos/Azure.svg";
 import Zod from "./../../assets/stackLogos/Zod.svg";
+import DiscordJS from "./../stackLogos/DiscordJS.svg";
 
 export {
   TypeScript,
@@ -70,4 +71,5 @@ export {
   Git,
   Azure,
   Zod,
+  DiscordJS,
 }
