@@ -3,8 +3,10 @@ import bannerHome from './banner/banner-home.jpg';
 import logo from './nav-logo/logo-buenoo.svg';
 
 // PROJECTS
-import freeMovies from './projects/free_movies.png';
-import cesfamBackend from './projects/cesfam_backend.png';
+import freeMoviesHd from './projects/free_movies_hd.png';
+import cesfamBackendHd from './projects/cesfam_backend_hd.png';
+import rolachin from './projects/rolachin.png';
+import ayudaPeluda from './projects/ayuda_peluda.png';
 
 // WORKPLACES
 import Tyne from './workplaces/Tyne.jpeg';
@@ -16,10 +18,12 @@ import Amaris from './workplaces/Amaris.jpg';
 export { 
   bannerHome, 
   logo, 
-  freeMovies, 
-  cesfamBackend, 
   victor,
   Tyne,
   FTC,
   Amaris,
+  freeMoviesHd,
+  cesfamBackendHd,
+  rolachin,
+  ayudaPeluda,
 } 
