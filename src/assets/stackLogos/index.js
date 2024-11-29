@@ -16,10 +16,10 @@ import Css from "./../../assets/stackLogos/Css.svg";
 import JavaScript from "./../../assets/stackLogos/JavaScript.svg";
 import Tailwind from "./../../assets/stackLogos/Tailwind.svg";
 import NestJS from "./../../assets/stackLogos/NestJS.svg";
-import ExpressJS from "./../../assets/stackLogos/ExpressJS.svg"
+import ExpressJS from "./../../assets/stackLogos/ExpressJS.svg";
 import FastAPI from "./../../assets/stackLogos/FastAPI.svg";
 import SocketIO from "./../../assets/stackLogos/SocketIO.svg";
-import PostgreSQL from "./../../assets/stackLogos/PostgreSQL.svg"
+import PostgreSQL from "./../../assets/stackLogos/PostgreSQL.svg";
 import MongoDB from "./../../assets/stackLogos/MongoDB.svg";
 import GraphQL from "./../../assets/stackLogos/GraphQL.svg";
 import Docker from "./../../assets/stackLogos/Docker.svg";
@@ -34,6 +34,8 @@ import Git from "./../../assets/stackLogos/Git.svg";
 import Azure from "./../../assets/stackLogos/Azure.svg";
 import Zod from "./../../assets/stackLogos/Zod.svg";
 import DiscordJS from "./../stackLogos/DiscordJS.svg";
+import Gcp from "./../../assets/stackLogos/Gcp.svg";
+import TanStack from "./../../assets/stackLogos/TanStack.svg";
 
 export {
   TypeScript,
@@ -72,4 +74,6 @@ export {
   Azure,
   Zod,
   DiscordJS,
-}
+  Gcp,
+  TanStack,
+};

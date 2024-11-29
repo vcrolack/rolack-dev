@@ -1,41 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 body {
   margin: 0;
   background: #272727;
-  color: #FFF;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 a {
-  color: #FFF;
+  color: #fff;
 }
 
 strong {
-  color: #91CB00;
+  color: #91cb00;
 }
 
 label {
-  color: #91CB00;
+  color: #91cb00;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
 hr {
-  border-color: #91CB00;
+  border-color: #91cb00;
 }
 
 input {
@@ -45,8 +45,8 @@ input {
   background-color: #272727;
   border: none;
   outline: none;
-  caret-color: #91CB00;
-  color: #FFF;
+  caret-color: #91cb00;
+  color: #fff;
   font-size: 18px;
 }
 
@@ -55,13 +55,13 @@ textarea {
   padding: 10px;
   border: none;
   outline: none;
-  caret-color: #91CB00;
-  color: #FFF;
+  caret-color: #91cb00;
+  color: #fff;
   resize: none;
   font-size: 18px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 .error-container {
@@ -71,7 +71,7 @@ textarea {
 
 .error {
   font-weight: bold;
-  color: #DC3545;
+  color: #dc3545;
 }
 
 .font-size-title {
@@ -99,7 +99,7 @@ textarea {
 .burger-menu {
   width: 85%;
   margin-right: 20px;
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -111,7 +111,7 @@ textarea {
   width: 4em;
   height: 0.5em;
   margin-bottom: 0.5em;
-  background-color: #91CB00;
+  background-color: #91cb00;
   border-radius: 0.5em;
 }
 
@@ -120,8 +120,8 @@ textarea {
   height: 70vh;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  background-color: #1A1A1A;
-  position:absolute;
+  background-color: #1a1a1a;
+  position: absolute;
   top: 0;
   z-index: -1;
 
@@ -176,14 +176,14 @@ textarea {
   height: 135px;
   position: fixed;
   margin-bottom: 15px;
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-box-shadow: -4px 25px 34px -9px rgba(0,0,0,0.41); 
-  box-shadow: -4px 25px 34px -9px rgba(0,0,0,0.41);
+  -webkit-box-shadow: -4px 25px 34px -9px rgba(0, 0, 0, 0.41);
+  box-shadow: -4px 25px 34px -9px rgba(0, 0, 0, 0.41);
   z-index: 10;
 }
 
@@ -227,11 +227,11 @@ textarea {
 }
 
 .header a:hover {
-  color: #91CB00;
+  color: #91cb00;
 }
 
 .activated {
-  color: #91CB00;
+  color: #91cb00;
 }
 
 /* HERO */
@@ -258,7 +258,7 @@ textarea {
 
 .welcome-title {
   font-size: 40px;
-  color: #91CB00;
+  color: #91cb00;
 }
 
 .container-cards {
@@ -272,7 +272,7 @@ textarea {
   width: 75%;
   height: auto;
   border-radius: 10px;
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   display: flex;
 }
 
@@ -303,7 +303,8 @@ textarea {
   font-size: 16px;
 }
 
-.about-me-subtitle, .about-me-subtitle strong {
+.about-me-subtitle,
+.about-me-subtitle strong {
   letter-spacing: 5px;
 }
 
@@ -356,8 +357,8 @@ textarea {
   width: 70rem;
   margin: 40px 50px 40px 50px;
   background-color: #202020;
-  -webkit-box-shadow: 0px 2px 10px -1px #030303; 
-  box-shadow: 0px 2px 10px -1px #91CB00;
+  -webkit-box-shadow: 0px 2px 10px -1px #030303;
+  box-shadow: 0px 2px 10px -1px #91cb00;
   transition: transform 1s ease-in-out;
 }
 
@@ -422,13 +423,13 @@ textarea {
 .container-stack {
   width: 70%;
   height: auto;
-  background-color: rgba(26,26,26,.6);
+  background-color: rgba(26, 26, 26, 0.6);
   border-radius: 10px;
   padding: 30px;
 }
 
 .container-stack h2 {
-  color: #91CB00;
+  color: #91cb00;
 }
 
 .container-stack-imgs {
@@ -437,13 +438,14 @@ textarea {
   justify-content: center;
 }
 
-.front-end, .back-end {
+.front-end,
+.back-end {
   width: 50%;
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: rgba(26,26,26,.6);
+  background-color: rgba(26, 26, 26, 0.6);
 }
 
 .stack-logo {
@@ -482,7 +484,7 @@ textarea {
 }
 
 .filter-buttons.active {
-  background-color: #91CB00;
+  background-color: #91cb00;
   color: #272727;
   font-weight: bold;
   transition: all linear 150ms;
@@ -492,12 +494,17 @@ textarea {
   width: 80%;
   height: auto;
   min-height: 550px;
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   border-radius: 10px;
   margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.project-card-detail {
+  width: 100%;
+  display: flex;
 }
 
 .container-img-project {
@@ -513,10 +520,14 @@ textarea {
   border-top-left-radius: 10px;
 }
 
+.info-project {
+  width: 100%;
+}
+
 .info-project .container-title {
   padding: 0 50px 0 50px;
   font-size: 30px;
-  color: #91CB00;
+  color: #91cb00;
   text-align: start;
 }
 
@@ -531,31 +542,48 @@ textarea {
   justify-content: flex-start;
 }
 
+.project-actions {
+  width: 100%;
+}
+
 .btn {
   width: 200px;
   height: 50px;
   border-radius: 10px;
   cursor: pointer;
-  background-color: #91CB00;
+  background-color: #91cb00;
   border: none;
   font-size: 20px;
   font-weight: bold;
   transition: all linear 150ms;
 }
 
+.btn-secondary {
+  background-color: #272727 !important;
+}
+
 .btn:hover {
   background-color: #272727;
-  color: #91CB00;
+  color: #91cb00;
 }
 
 .btn-container {
-  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 26px;
 }
 
 .btn-container a {
   margin-bottom: 30px;
+}
+
+.text-button {
+  text-decoration: none;
+}
+
+.text-button:hover {
+  text-decoration: underline;
 }
 
 /* SERVICES */
@@ -572,9 +600,9 @@ textarea {
   width: 80%;
   height: auto;
   border-radius: 10px;
-  background-color: #1A1A1A;
-  border-top: 1px #91CB00 solid;
-  border-bottom: 1px #91CB00 solid;
+  background-color: #1a1a1a;
+  border-top: 1px #91cb00 solid;
+  border-bottom: 1px #91cb00 solid;
   display: flex;
 }
 
@@ -592,8 +620,8 @@ textarea {
 }
 
 .container-logo {
-width: 200px;
-height: 200px;
+  width: 200px;
+  height: 200px;
 }
 
 .container-logo img {
@@ -624,7 +652,7 @@ height: 200px;
   padding-left: 50px;
   padding-right: 50px;
   border-radius: 10px;
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -658,12 +686,11 @@ form {
   align-items: flex-end;
 }
 
-
 .footer {
   height: 100px;
   margin: 0;
   width: 100%;
-  border-top: 10px solid #91CB00 ;
+  border-top: 10px solid #91cb00;
 }
 
 .footer-container {
@@ -688,14 +715,13 @@ form {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
 }
 .footer-container .social-networks svg {
   transition: all 300ms;
 }
 
 .footer-container .social-networks svg:hover {
-  color: #91CB00;
+  color: #91cb00;
   cursor: pointer;
 }
 
@@ -713,25 +739,25 @@ form {
 
 .loader div {
   width: 12px;
-  background: #91CB00;
+  background: #91cb00;
   animation: loader 1.8s linear infinite;
 }
 
 @keyframes loader {
   0% {
-      height: 12px;
+    height: 12px;
   }
   25% {
-      height: 50px;
+    height: 50px;
   }
   50% {
-      height: 10px;
+    height: 10px;
   }
   75% {
-      height: 25px;
+    height: 25px;
   }
   100% {
-      height: 12px;
+    height: 12px;
   }
 }
 
@@ -740,7 +766,6 @@ form {
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
-  
   .header {
     width: inherit;
   }
@@ -748,7 +773,6 @@ form {
   .logo {
     margin-left: 10px;
   }
-  
 
   .container-cards {
     flex-direction: column;
@@ -794,12 +818,13 @@ form {
   .workplace-image {
     width: 100%;
   }
-  
+
   .workplace-image img {
     width: 100%;
   }
 
-  .front-end, .back-end {
+  .front-end,
+  .back-end {
     width: 90%;
   }
 
@@ -817,8 +842,8 @@ form {
     padding-bottom: 20px;
   }
 
-
-  .container-input, .inputs {
+  .container-input,
+  .inputs {
     display: block;
   }
 
@@ -830,8 +855,6 @@ form {
   .inputs label {
     margin-right: 10px;
   }
-
-
 
   .footer {
     width: 100%;
@@ -909,12 +932,13 @@ form {
   .workplace-image {
     width: 100%;
   }
-  
+
   .workplace-image img {
     width: 100%;
   }
 
-  .front-end, .back-end {
+  .front-end,
+  .back-end {
     width: 100%;
   }
 
@@ -925,7 +949,6 @@ form {
   .projects-filter {
     justify-content: flex-start;
     overflow: scroll;
-
   }
 
   .project-card {
@@ -961,8 +984,9 @@ form {
     padding-right: 50;
     padding-left: 0;
   }
-  
-  .container-input, .inputs {
+
+  .container-input,
+  .inputs {
     display: block;
   }
 

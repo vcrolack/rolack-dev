@@ -1,4 +1,10 @@
-import { ayudaPeluda, cesfamBackendHd, freeMoviesHd, rolachin } from "../../assets/img";
+import {
+  ayudaPeluda,
+  cesfamBackendHd,
+  freeMoviesHd,
+  hdyf,
+  rolachin,
+} from "../../assets/img";
 import {
   FastAPI,
   MySQL,
@@ -10,6 +16,9 @@ import {
   Html5,
   Css,
   Bootstrap,
+  Tailwind,
+  Firebase,
+  TanStack,
 } from "./../../assets/stackLogos";
 
 export const areas = {
@@ -20,6 +29,25 @@ export const areas = {
 };
 
 export const projects = [
+  {
+    name: "How do you feel?",
+    area: areas.Frontend,
+    description:
+      "It’s a project built with React and TypeScript, styled using Tailwind CSS. Its objective is to track your mood by adding details such as emotions, timestamps, and descriptions about how you’re feeling. The project is also integrated with Firebase for authentication and uses Firestore to store your entries securely.",
+    img: hdyf,
+    githubUrl: "https://github.com/vcrolack/hdyf",
+    urlDeployed: "https://hdufeel.netlify.app",
+    stack: [ReactLogo, TypeScript, Tailwind, TanStack, Firebase],
+  },
+  {
+    name: "Rolachin",
+    area: areas.Others,
+    description:
+      "It's a project build in TypeScript, Discord.js and Discord Player for a Discord bot. It's a music bot with features like play, skip, queue and others. I use Docker to create an production image.",
+    img: rolachin,
+    githubUrl: "https://github.com/vcrolack/rolachin",
+    stack: [TypeScript, NodeJS, DiscordJS],
+  },
   {
     name: "Free Movies",
     area: areas.Frontend,
@@ -37,15 +65,6 @@ export const projects = [
     img: cesfamBackendHd,
     githubUrl: "https://github.com/vcrolack/farmacia-cesfam-backend",
     stack: [Python, FastAPI, MySQL],
-  },
-  {
-    name: "Rolachin",
-    area: areas.Others,
-    description:
-      "It's a project build in TypeScript, Discord.js and Discord Player for a Discord bot. It's a music bot with features like play, skip, queue and others. I use Docker to create an production image.",
-    img: rolachin,
-    githubUrl: "https://github.com/vcrolack/rolachin",
-    stack: [TypeScript, NodeJS, DiscordJS],
   },
   {
     name: "Adopta un peludo",

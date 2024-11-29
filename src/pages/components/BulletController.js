@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   faChevronLeft,
   faChevronRight,
@@ -8,7 +8,6 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const BulletController = ({ data, activeCard, setActiveCard, refs }) => {
-
   const { containerRef, cardsRef } = refs;
 
   const handleNext = () => {
@@ -16,14 +15,18 @@ export const BulletController = ({ data, activeCard, setActiveCard, refs }) => {
     setActiveCard(nextIndex);
 
     if (cardsRef.current[nextIndex]) {
-      const scrollPosition = (cardsRef.current[nextIndex].offsetLeft - containerRef.current.offsetWidth / 2) + (cardsRef.current[nextIndex].offsetWidth / 2);
+      const scrollPosition =
+        cardsRef.current[nextIndex].offsetLeft -
+        containerRef.current.offsetWidth / 2 +
+        cardsRef.current[nextIndex].offsetWidth / 2;
       containerRef.current.scrollLeft = scrollPosition;
     }
   };
 
   const handlePrev = () => {
     setActiveCard(
-      (prevActiveCard) => (prevActiveCard - 1 + data.length) % data.length);
+      (prevActiveCard) => (prevActiveCard - 1 + data.length) % data.length
+    );
   };
 
   return (
