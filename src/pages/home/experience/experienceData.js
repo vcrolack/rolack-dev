@@ -3,15 +3,16 @@ import {
   Angular,
   Azure,
   FastAPI,
+  Gcp,
   JavaScript,
   MongoDB,
+  NestJS,
   PostgreSQL,
   Python,
   ReactLogo,
   SQLServer,
   Sass,
   TypeScript,
-  Zod,
 } from "../../../assets/stackLogos";
 
 export const experienceData = [
@@ -42,10 +43,18 @@ export const experienceData = [
     company: "Amaris",
     role: "Consultant",
     taskDescription:
-      "SOON...",
-    technologies: [ ReactLogo, Sass, TypeScript, Zod ],
+      "I work as a technology consultant at Amaris Consulting, delivering innovative solutions that bring value to our clients’ businesses. I have experience in both Front-end and Back-end development, easily adapting to the required technology stack and collaborating in Agile teams.",
+    technologies: [
+      ReactLogo,
+      Sass,
+      TypeScript,
+      NestJS,
+      PostgreSQL,
+      MongoDB,
+      Gcp,
+    ],
     startDate: "2024 may",
-    endDate: "Present",
+    endDate: null,
     logo: Amaris,
   },
 ];

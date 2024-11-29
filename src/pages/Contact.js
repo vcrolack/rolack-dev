@@ -1,48 +1,13 @@
-import React from "react";
-import { useRef } from "react";
+import React, { useRef } from "react";
 
-import { useForm } from "../hooks/useForm";
-import { Banner } from "./components/Banner";
-import { Input } from "./components/Input";
-import { Textarea } from "./components/Textarea";
-import { Loader } from "./components/Loader";
-import { Message } from "./components/Message";
-
-import { useScreenSize } from "../hooks/useScreenSize";
-
-import banner from "../assets/img/banner/banner-home.jpg";
+import { useForm, useScreenSize, useValidationsForm } from "../hooks";
+import { Banner, Input, Textarea, Loader, Message } from "./components";
+import { bannerHome } from "../assets/img";
 
 const initialForm = {
   to_name: "",
   to_email: "",
   message: "",
-};
-
-const validationsForm = (form) => {
-  let errors = {};
-  const regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
-  const regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
-  const regexMessage = /^.{1,255}$/;
-
-  if (!form.to_name.trim()) {
-    errors.to_name = "Name is required";
-  } else if (!regexName.test(form.to_name.trim())) {
-    errors.to_name = "Name only accpets letters and blanks";
-  }
-
-  if (!form.to_email.trim()) {
-    errors.to_email = "Email is required";
-  } else if (!regexEmail.test(form.to_email.trim())) {
-    errors.to_email = "Write a valid email";
-  }
-
-  if (!form.message.trim()) {
-    errors.message = "Message is required";
-  } else if (!regexMessage.test(form.message.trim())) {
-    errors.message = "The message can not have more of 255 characters";
-  }
-
-  return errors;
 };
 
 export const Contact = () => {
@@ -55,18 +20,18 @@ export const Contact = () => {
     handleChange,
     handleBlur,
     handleSubmit,
-  } = useForm(initialForm, validationsForm);
+  } = useForm(initialForm, useValidationsForm);
 
   const sendForm = useRef();
   const { width } = useScreenSize();
 
   return (
     <div className="container">
-      <Banner image={banner} />
+      <Banner image={bannerHome} />
       <section id="contact">
         <div className="container-title">
           <h1>
-            Do you have a project in mind? <br /> <strong>Contact me</strong>
+            Do you have a project in mind? <br /> <strong>C O N T A C T &nbsp; M E</strong>
           </h1>
         </div>
         <div className="container-contact">
