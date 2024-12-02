@@ -1,15 +1,33 @@
 import { useState } from "react";
 
 import emailjs from "@emailjs/browser";
+import { FormState } from "../interfaces/form-state";
+import { Errors } from "./useValidationsForm";
 
-export const useForm = (initialForm, validateForm) => {
-  const [form, setForm] = useState(initialForm);
-  const [errors, setErrors] = useState({});
-  const [loading, setLoading] = useState(false);
-  const [response, setResponse] = useState(null);
-  const [messageResponse, setMessageResponse] = useState({});
+export interface Form {
+  name: string;
+  email: string;
+  message: string;
+}
 
-  const handleChange = (e) => {
+export interface MessageResponse {
+  message?: string | null | undefined;
+  color?: string | null | undefined;
+}
+
+export const useForm = (
+  initialForm: Form,
+  validateForm: (form: Form) => Errors
+) => {
+  const [form, setForm] = useState<Form>(initialForm);
+  const [errors, setErrors] = useState<Errors>({});
+  const [loading, setLoading] = useState<boolean>(false);
+  const [response, setResponse] = useState<boolean | null>(null);
+  const [messageResponse, setMessageResponse] = useState<MessageResponse>();
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
 
     setForm({
@@ -18,16 +36,16 @@ export const useForm = (initialForm, validateForm) => {
     });
   };
 
-  const handleBlur = (e) => {
+  const handleBlur = (e: any) => {
     handleChange(e);
     setErrors(validateForm(form));
   };
 
-  const sendEmail = (sendForm, target) => {
+  const sendEmail = (sendForm: any, target: any) => {
     emailjs
       .sendForm(
-        process.env.REACT_APP_EMAIL_SERVICE,
-        process.env.REACT_APP_TEMPLATE_ID,
+        process.env.REACT_APP_EMAIL_SERVICE!,
+        process.env.REACT_APP_TEMPLATE_ID!,
         sendForm.current,
         process.env.REACT_APP_PUBLIC_KEY
       )
@@ -69,7 +87,7 @@ export const useForm = (initialForm, validateForm) => {
       });
   };
 
-  const handleSubmit = (e, sendForm) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>, sendForm: any) => {
     e.preventDefault();
     setErrors(validateForm(form));
 

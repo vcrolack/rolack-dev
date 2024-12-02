@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 
-import { useForm, useScreenSize, useValidationsForm } from "../../hooks";
+import { Form, useForm, useScreenSize, useValidationsForm } from "../../hooks";
 import { Banner, Input, Textarea, Loader, Message } from "@components/";
 import { bannerHome } from "@assets/img";
 
-const initialForm = {
-  to_name: "",
-  to_email: "",
+const initialForm: Form = {
+  name: "",
+  email: "",
   message: "",
 };
 
@@ -22,7 +22,7 @@ export const Contact = () => {
     handleSubmit,
   } = useForm(initialForm, useValidationsForm);
 
-  const sendForm = useRef();
+  const sendForm = useRef<HTMLFormElement | null>(null);
   const { width } = useScreenSize();
 
   return (
@@ -39,7 +39,9 @@ export const Contact = () => {
           <div className="card-contact">
             <form
               ref={sendForm}
-              onSubmit={(e) => handleSubmit(e, sendForm)}
+              onSubmit={(e: React.FormEvent<HTMLFormElement>) =>
+                handleSubmit(e, sendForm)
+              }
               name="contact-form"
               action=""
             >
@@ -51,14 +53,12 @@ export const Contact = () => {
                     onBlur={handleBlur}
                     type="text"
                     labelText="Name"
-                    name="to_name"
+                    name="name"
                     value={form.name}
                     isRequired={true}
                   />
                   <div className="error-container">
-                    {errors.to_name && (
-                      <p className="error">{errors.to_name}</p>
-                    )}
+                    {errors.name && <p className="error">{errors.name}</p>}
                   </div>
                   <Input
                     placeholder="example@example.com"
@@ -66,14 +66,12 @@ export const Contact = () => {
                     onBlur={handleBlur}
                     type="email"
                     labelText="Email"
-                    name="to_email"
+                    name="email"
                     value={form.email}
                     isRequired={true}
                   />
                   <div className="error-container">
-                    {errors.to_email && (
-                      <p className="error">{errors.to_email}</p>
-                    )}
+                    {errors.email && <p className="error">{errors.email}</p>}
                   </div>
                 </div>
                 <div className="container-message">
@@ -83,8 +81,8 @@ export const Contact = () => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       labelText="Message"
-                      rows="7"
-                      cols="50"
+                      rows={7}
+                      cols={50}
                       name="message"
                       value={form.message}
                       isRequired={true}
@@ -96,8 +94,8 @@ export const Contact = () => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       labelText="Message"
-                      rows="10"
-                      cols="20"
+                      rows={10}
+                      cols={20}
                       name="message"
                       value={form.message}
                       isRequired={true}
@@ -120,8 +118,8 @@ export const Contact = () => {
               {loading && <Loader />}
               {response && (
                 <Message
-                  msg={messageResponse.message}
-                  fontColor={messageResponse.color}
+                  msg={messageResponse?.message ?? "Unexpected error"}
+                  fontColor={messageResponse?.color ?? "#DC3545"}
                 />
               )}
             </div>
