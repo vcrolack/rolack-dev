@@ -19,7 +19,7 @@ import {
   Tailwind,
   Firebase,
   TanStack,
-} from "./../../assets/stackLogos";
+} from "../../assets/stackLogos";
 
 export const areas = {
   All: "All",

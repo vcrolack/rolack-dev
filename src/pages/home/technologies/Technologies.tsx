@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Title } from "../../components";
-import { Frontend, Backend, Tools } from "./";
+import { Frontend, Backend, Tools } from ".";
 
 export const Technologies = () => {
   return (
@@ -10,13 +10,11 @@ export const Technologies = () => {
         <Title text="MY STACK" />
       </div>
       <div id="technologies" className="container-stack">
-
         <Frontend />
-       
+
         <Backend />
 
         <Tools />
-        
       </div>
     </section>
   );

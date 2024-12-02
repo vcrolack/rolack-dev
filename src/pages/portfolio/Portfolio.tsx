@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Banner } from "../components/Banner";
 import { Project } from "../components/Project";
-import { bannerHome } from "./../../assets/img";
+import { bannerHome } from "../../assets/img";
 import { projects, areas as filters } from "./projects";
 
 export const Portfolio = () => {

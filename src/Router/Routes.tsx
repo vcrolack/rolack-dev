@@ -1,12 +1,8 @@
 import React from "react";
-import {
-  Routes as ReactRoutes,
-  Route,
-  BrowserRouter,
-} from "react-router-dom";
+import { Routes as ReactRoutes, Route, BrowserRouter } from "react-router-dom";
 
 import { Home, Portfolio, Services, Contact } from "../pages";
-import { HeaderNav, Footer} from "../pages/components";
+import { HeaderNav, Footer } from "../pages/components";
 
 export const Routes = () => {
   return (
