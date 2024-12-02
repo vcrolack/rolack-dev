@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/img/nav-logo/logo-buenoo.svg";
+import logo from "@assets/img/nav-logo/logo-buenoo.svg";
 
-import { useScreenSize } from "../../hooks/useScreenSize";
+import { useScreenSize } from "@hooks/useScreenSize";
 
 export const HeaderNav = () => {
   const [burgerClass, setBurgerClass] = useState("burger-bar unclicked");

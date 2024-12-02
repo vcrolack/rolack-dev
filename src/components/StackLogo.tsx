@@ -1,6 +1,18 @@
 import React from "react";
 
-export const StackLogo = ({ logo, page, width = "70px", height = "70px" }) => {
+interface StackLogoProps {
+  logo: string;
+  page?: string | null | undefined;
+  width: string;
+  height: string;
+}
+
+export const StackLogo: React.FC<StackLogoProps> = ({
+  logo,
+  page,
+  width = "70px",
+  height = "70px",
+}) => {
   return (
     <div className="stack-logo" style={{ width, height }}>
       {page ? (

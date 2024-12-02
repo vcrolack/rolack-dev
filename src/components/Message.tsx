@@ -1,7 +1,12 @@
 import React from "react";
 
-export const Message = ({ msg, fontColor }) => {
-  let styles = {
+interface MessageProps {
+  msg: string;
+  fontColor: string;
+}
+
+export const Message: React.FC<MessageProps> = ({ msg, fontColor }) => {
+  let styles: React.CSSProperties = {
     textAlign: "center",
     color: fontColor,
     fontWeight: "bold",

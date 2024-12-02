@@ -1,6 +1,18 @@
 import React from "react";
 
-export const Service = ({ type, description, icon, list }) => {
+interface ServiceProps {
+  type: string;
+  description: string;
+  icon: string;
+  list: string[];
+}
+
+export const Service: React.FC<ServiceProps> = ({
+  type,
+  description,
+  icon,
+  list,
+}) => {
   return (
     <div className="service-container">
       <div className="container-left-block">
@@ -15,9 +27,7 @@ export const Service = ({ type, description, icon, list }) => {
         <div className="description-service">
           <p>{description}</p>
           {list.map((item, index) => {
-            return (
-              <li>{item}</li>
-            )
+            return <li key={index}>{item}</li>;
           })}
         </div>
       </div>

@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 
-import { useForm, useScreenSize, useValidationsForm } from "../hooks";
-import { Banner, Input, Textarea, Loader, Message } from "./components";
-import { bannerHome } from "../assets/img";
+import { useForm, useScreenSize, useValidationsForm } from "../../hooks";
+import { Banner, Input, Textarea, Loader, Message } from "@components/";
+import { bannerHome } from "@assets/img";
 
 const initialForm = {
   to_name: "",
@@ -31,7 +31,8 @@ export const Contact = () => {
       <section id="contact">
         <div className="container-title">
           <h1>
-            Do you have a project in mind? <br /> <strong>C O N T A C T &nbsp; M E</strong>
+            Do you have a project in mind? <br />{" "}
+            <strong>C O N T A C T &nbsp; M E</strong>
           </h1>
         </div>
         <div className="container-contact">
@@ -81,7 +82,6 @@ export const Contact = () => {
                       placeholder="Hi, I'm ..."
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      type="text"
                       labelText="Message"
                       rows="7"
                       cols="50"
@@ -95,7 +95,6 @@ export const Contact = () => {
                       placeholder="Hi, I'm ..."
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      type="text"
                       labelText="Message"
                       rows="10"
                       cols="20"

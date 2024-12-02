@@ -1,5 +1,5 @@
 import React from "react";
-import { StackLogo } from "../../components";
+import { StackLogo } from "@components/";
 
 export const ExperienceCard = React.forwardRef(
   ({ experience, isActive }, ref) => {

@@ -1,39 +1,48 @@
 import React from "react";
 
-export const Input = ({
+interface TextareaProps
+  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  labelText: string;
+  isRequired: boolean;
+}
+
+export const Textarea: React.FC<TextareaProps> = ({
   labelText,
-  type,
+  rows,
+  cols,
   name,
-  isRequired,
-  value,
   onChange,
   onBlur,
+  isRequired,
+  value,
   placeholder,
 }) => {
   return (
     (isRequired && (
       <div className="container-input">
         <label htmlFor="">{labelText}</label>
-        <input
+        <textarea
           placeholder={placeholder}
+          name={name}
+          rows={rows}
+          cols={cols}
           onChange={onChange}
           onBlur={onBlur}
-          required
-          name={name}
-          type={type}
           value={value}
-        />
+          required
+        ></textarea>
       </div>
     )) || (
       <div className="container-input">
         <label htmlFor="">{labelText}</label>
-        <input
+        <textarea
+          name={name}
+          rows={rows}
+          cols={cols}
           onChange={onChange}
           onBlur={onBlur}
-          name={name}
-          type={type}
           value={value}
-        />
+        ></textarea>
       </div>
     )
   );

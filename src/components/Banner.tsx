@@ -1,6 +1,10 @@
 import React from "react";
 
-export const Banner = ({ image }) => {
+interface BannerProps {
+  image: string;
+}
+
+export const Banner: React.FC<BannerProps> = ({ image }) => {
   return (
     <>
       <div className="container-banner">

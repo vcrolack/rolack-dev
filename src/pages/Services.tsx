@@ -2,11 +2,15 @@ import React from "react";
 
 import { bannerHome } from "../assets/img";
 import { ReactLogo, Django } from "../assets/stackLogos";
-import { Banner, Service } from "./components";
+import { Banner, Service } from "@components/";
 
 export const Services = () => {
-  const frontList = ["High fidelity mockups", "Programming interfaces", "Creat a great experience"];
-  const backList = ["API rest", "Database model", "Authentication service"]
+  const frontList = [
+    "High fidelity mockups",
+    "Programming interfaces",
+    "Creat a great experience",
+  ];
+  const backList = ["API rest", "Database model", "Authentication service"];
   return (
     <div className="container">
       <Banner image={bannerHome} />

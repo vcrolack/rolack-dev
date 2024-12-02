@@ -1,10 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Title } from "../../components";
+import { useEffect, useRef, useState } from "react";
+import { Title, BulletController } from "@components/";
 import { experienceData, ExperienceCard } from ".";
-import { BulletController } from "../../components/BulletController";
 
 export const Experience = () => {
-  const [activeCard, setActiveCard] = useState(0);
+  const [activeCard, setActiveCard] = useState<number>(0);
   const containerRef = useRef(null);
   const cardsRef = useRef([]);
 

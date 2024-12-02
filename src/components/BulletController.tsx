@@ -7,7 +7,19 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const BulletController = ({ data, activeCard, setActiveCard, refs }) => {
+interface BulletControllerProps {
+  data: any[];
+  activeCard: number;
+  setActiveCard: React.Dispatch<React.SetStateAction<number>>;
+  refs: any;
+}
+
+export const BulletController: React.FC<BulletControllerProps> = ({
+  data,
+  activeCard,
+  setActiveCard,
+  refs,
+}) => {
   const { containerRef, cardsRef } = refs;
 
   const handleNext = () => {
@@ -43,6 +55,7 @@ export const BulletController = ({ data, activeCard, setActiveCard, refs }) => {
       <div className="experience-bullet">
         {data.map((experience, index) => (
           <FontAwesomeIcon
+            key={experience.id}
             size="2x"
             icon={index === activeCard ? faCircleDot : faCircle}
             color={index === activeCard ? "#91CB00" : "#1A1A1A"}

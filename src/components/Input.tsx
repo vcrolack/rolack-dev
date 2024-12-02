@@ -1,45 +1,50 @@
 import React from "react";
 
-export const Textarea = ({
-  type,
+interface InputProps {
+  labelText: string;
+  type: string;
+  name: string;
+  isRequired: boolean;
+  value: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur: (event: React.FocusEvent<HTMLElement>) => void;
+  placeholder: string;
+}
+
+export const Input: React.FC<InputProps> = ({
   labelText,
-  rows,
-  cols,
+  type,
   name,
-  onChange,
-  onBlur,
   isRequired,
   value,
+  onChange,
+  onBlur,
   placeholder,
 }) => {
   return (
     (isRequired && (
       <div className="container-input">
         <label htmlFor="">{labelText}</label>
-        <textarea
+        <input
           placeholder={placeholder}
-          name={name}
-          rows={rows}
-          cols={cols}
-          type={type}
           onChange={onChange}
           onBlur={onBlur}
-          value={value}
           required
-        ></textarea>
+          name={name}
+          type={type}
+          value={value}
+        />
       </div>
     )) || (
       <div className="container-input">
         <label htmlFor="">{labelText}</label>
-        <textarea
-          name={name}
-          rows={rows}
-          cols={cols}
-          type={type}
+        <input
           onChange={onChange}
           onBlur={onBlur}
+          name={name}
+          type={type}
           value={value}
-        ></textarea>
+        />
       </div>
     )
   );

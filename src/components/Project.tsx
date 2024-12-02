@@ -3,7 +3,16 @@ import { Title } from "./Title";
 import { Text } from "./Text";
 import { StackLogo } from "./StackLogo";
 
-export const Project = ({
+interface ProjectProps {
+  githubUrl: string;
+  name: string;
+  description: string;
+  img: string;
+  stack: string[];
+  urlDeployed: string;
+}
+
+export const Project: React.FC<ProjectProps> = ({
   githubUrl,
   name,
   description,

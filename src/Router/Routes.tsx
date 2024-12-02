@@ -1,8 +1,7 @@
-import React from "react";
 import { Routes as ReactRoutes, Route, BrowserRouter } from "react-router-dom";
 
-import { Home, Portfolio, Services, Contact } from "../pages";
-import { HeaderNav, Footer } from "../pages/components";
+import { Home, Portfolio, Services, Contact } from "@pages/";
+import { HeaderNav, Footer } from "@components/";
 
 export const Routes = () => {
   return (

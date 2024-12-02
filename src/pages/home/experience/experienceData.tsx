@@ -15,7 +15,18 @@ import {
   TypeScript,
 } from "../../../assets/stackLogos";
 
-export const experienceData = [
+interface ExperienceData {
+  id: number;
+  company: string;
+  role: string;
+  taskDescription: string;
+  technologies: string[];
+  startDate: string;
+  endDate?: string | null | undefined;
+  logo: string;
+}
+
+export const experienceData: ExperienceData[] = [
   {
     id: 1,
     company: "Tyne",
