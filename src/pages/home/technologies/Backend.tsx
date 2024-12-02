@@ -1,5 +1,3 @@
-import React from "react";
-
 import {
   Python,
   Django,
@@ -18,9 +16,10 @@ import {
   AWS,
 } from "../../../assets/stackLogos";
 import { StackLogo } from "@components/";
+import { Stack } from "../../../interfaces/stack";
 
 export const Backend = () => {
-  const stack = [
+  const stack: Stack[] = [
     { logo: NodeJS, page: "https://nodejs.org/en/" },
     { logo: ExpressJS, page: "https://expressjs.com/" },
     { logo: NestJS, page: "https://nestjs.com/" },

@@ -4,8 +4,8 @@ import { experienceData, ExperienceCard } from ".";
 
 export const Experience = () => {
   const [activeCard, setActiveCard] = useState<number>(0);
-  const containerRef = useRef(null);
-  const cardsRef = useRef([]);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     if (cardsRef.current[0] && containerRef.current) {
@@ -19,12 +19,12 @@ export const Experience = () => {
 
   useEffect(() => {
     if (cardsRef.current[activeCard] && containerRef.current) {
-      const cardWidth = cardsRef.current[activeCard].offsetWidth;
+      const cardWidth = cardsRef.current[activeCard]!.offsetWidth;
       const containerWidth = containerRef.current.offsetWidth;
       const scrollPosition =
         containerWidth / 2 -
         cardWidth / 2 -
-        cardsRef.current[activeCard].offsetLeft;
+        cardsRef.current[activeCard]!.offsetLeft;
 
       containerRef.current.style.transform = `translateX(${scrollPosition}px)`;
     }

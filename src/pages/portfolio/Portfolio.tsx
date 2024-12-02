@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Banner } from "@components/Banner";
 import { Project } from "@components/Project";
 import { bannerHome } from "@assets/img";
-import { projects, areas as filters } from "./projects";
+import { projects, areas as filters, AreaKey, Projects } from "./projects";
 
 export const Portfolio = () => {
-  const [activeFilter, setActiveFilter] = useState(filters.All);
-  const [projectsFiltered, setProjectsFiltered] = useState([projects]);
+  const [activeFilter, setActiveFilter] = useState<AreaKey>(filters.All);
+  const [projectsFiltered, setProjectsFiltered] =
+    useState<Projects[]>(projects);
 
   useEffect(() => {
     const filtered = projects.filter(
@@ -15,7 +16,7 @@ export const Portfolio = () => {
     setProjectsFiltered(filtered);
   }, [activeFilter]);
 
-  const handleFilter = (filter) => setActiveFilter(filter);
+  const handleFilter = (filter: AreaKey) => setActiveFilter(filter);
 
   return (
     <div className="container">
@@ -67,7 +68,7 @@ export const Portfolio = () => {
               description={project.description}
               img={project.img}
               stack={project.stack}
-              urlDeployed={project.urlDeployed}
+              urlDeployed={project.urlDeployed ? project.urlDeployed : ""}
             />
           );
         })}

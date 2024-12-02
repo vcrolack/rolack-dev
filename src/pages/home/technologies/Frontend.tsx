@@ -1,5 +1,3 @@
-import React from "react";
-
 import {
   TypeScript,
   Sass,
@@ -15,9 +13,10 @@ import {
   Tailwind,
 } from "../../../assets/stackLogos";
 import { StackLogo } from "@components/";
+import { Stack } from "../../../interfaces/stack";
 
 export const Frontend = () => {
-  const stack = [
+  const stack: Stack[] = [
     {
       logo: Html5,
       page: "https://developer.mozilla.org/en-US/docs/Glossary/HTML5",

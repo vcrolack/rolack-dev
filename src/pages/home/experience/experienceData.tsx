@@ -15,7 +15,7 @@ import {
   TypeScript,
 } from "../../../assets/stackLogos";
 
-interface ExperienceData {
+export interface ExperienceData {
   id: number;
   company: string;
   role: string;

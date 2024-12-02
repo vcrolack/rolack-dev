@@ -23,12 +23,24 @@ import {
 
 export const areas = {
   All: "All",
-  Frontend: "Front-end",
-  Backend: "Back-end",
+  Frontend: "Frontend",
+  Backend: "Backend",
   Others: "Others",
-};
+} as const;
 
-export const projects = [
+export type AreaKey = keyof typeof areas;
+
+export interface Projects {
+  name: string;
+  area: AreaKey;
+  description: string;
+  img: string;
+  githubUrl: string;
+  urlDeployed?: string | undefined;
+  stack: string[];
+}
+
+export const projects: Projects[] = [
   {
     name: "How do you feel?",
     area: areas.Frontend,

@@ -3,8 +3,8 @@ import React from "react";
 interface StackLogoProps {
   logo: string;
   page?: string | null | undefined;
-  width: string;
-  height: string;
+  width?: string;
+  height?: string;
 }
 
 export const StackLogo: React.FC<StackLogoProps> = ({

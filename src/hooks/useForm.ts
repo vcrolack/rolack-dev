@@ -44,10 +44,10 @@ export const useForm = (
   const sendEmail = (sendForm: any, target: any) => {
     emailjs
       .sendForm(
-        process.env.REACT_APP_EMAIL_SERVICE!,
-        process.env.REACT_APP_TEMPLATE_ID!,
+        import.meta.env.VITE_EMAIL_SERVICE!,
+        import.meta.env.VITE_TEMPLATE_ID!,
         sendForm.current,
-        process.env.REACT_APP_PUBLIC_KEY
+        import.meta.env.VITE_PUBLIC_KEY!
       )
       .then(
         (result) => {
