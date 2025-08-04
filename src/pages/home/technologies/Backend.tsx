@@ -14,6 +14,7 @@ import {
   Docker,
   Firebase,
   AWS,
+  Gcp,
 } from "../../../assets/stackLogos";
 import { StackLogo } from "@components/";
 import { Stack } from "../../../interfaces/stack";
@@ -34,6 +35,7 @@ export const Backend = () => {
     { logo: PostgreSQL, page: "https://www.postgresql.org/" },
     { logo: MongoDB, page: "https://www.mongodb.com/" },
     { logo: AWS, page: "https://aws.amazon.com/es/" },
+    { logo: Gcp, page: "https://cloud.google.com/" },
     { logo: Firebase, page: "https://firebase.google.com/?hl=es-419" },
     { logo: GraphQL, page: "https://graphql.org/" },
     { logo: Docker, page: "https://www.docker.com/" },

@@ -52,13 +52,14 @@ export const experienceData: ExperienceData[] = [
   {
     id: 3,
     company: "Amaris",
-    role: "Consultant",
+    role: "Experienced Consultant",
     taskDescription:
       "I work as a technology consultant at Amaris Consulting, delivering innovative solutions that bring value to our clients’ businesses. I have experience in both Front-end and Back-end development, easily adapting to the required technology stack and collaborating in Agile teams.",
     technologies: [
-      ReactLogo,
-      Sass,
       TypeScript,
+      ReactLogo,
+      Angular,
+      Sass,
       NestJS,
       PostgreSQL,
       MongoDB,
