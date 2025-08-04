@@ -11,6 +11,7 @@ import {
   Css,
   JavaScript,
   Tailwind,
+  Swift,
 } from "../../../assets/stackLogos";
 import { StackLogo } from "@components/";
 import { Stack } from "../../../interfaces/stack";
@@ -35,6 +36,7 @@ export const Frontend = () => {
     { logo: Redux, page: "https://redux.js.org/" },
     { logo: Dart, page: "https://dart.dev/" },
     { logo: Flutter, page: "https://flutter.dev/" },
+    { logo: Swift, page: "https://developer.apple.com/swift/" },
   ];
 
   return (

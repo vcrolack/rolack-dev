@@ -36,6 +36,7 @@ import Zod from "./../../assets/stackLogos/Zod.svg";
 import DiscordJS from "./../stackLogos/DiscordJS.svg";
 import Gcp from "./../../assets/stackLogos/Gcp.svg";
 import TanStack from "./../../assets/stackLogos/TanStack.svg";
+import Swift from "./../../assets/stackLogos/Swift.svg";
 
 export {
   TypeScript,
@@ -76,4 +77,5 @@ export {
   DiscordJS,
   Gcp,
   TanStack,
+  Swift,
 };

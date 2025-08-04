@@ -1,4 +1,3 @@
-import { FormState } from "../interfaces/form-state";
 import { Form } from "./useForm";
 
 export interface Errors {
