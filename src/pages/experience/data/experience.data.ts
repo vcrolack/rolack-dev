@@ -16,6 +16,8 @@ import {
   Sass,
   TanStack,
   TypeScript,
+  Ubuntu,
+  Wordpress,
 } from "../../../assets/stackLogos";
 import { CompanyExperience } from "../../../interfaces/company-experience";
 
@@ -65,7 +67,7 @@ export const EXPERIENCE: CompanyExperience[] = [
     id: "falabella",
     company: "Falabella Tecnología Corporativa",
     logoUrl: FTC,
-    website: "asdas",
+    website: "https://investors.grupofalabella.com/",
     location: "Remote / LATAM",
     roles: [
       {
@@ -129,9 +131,9 @@ export const EXPERIENCE: CompanyExperience[] = [
   },
   {
     id: "freelance",
-    company: "Freelance developer",
-    logoUrl: "x",
-    website: "",
+    company: "Freelance",
+    logoUrl: "",
+    website: "https://www.linkedin.com/in/rolack-victor/",
     location: "Remote / LATAM",
     roles: [
       {
@@ -142,7 +144,7 @@ export const EXPERIENCE: CompanyExperience[] = [
         description: [
           "I developed websites in WordPress for small businesses and non-profit organizations, such as Climant (a climate control SME) and Iglesia Bautista Eben Ezer (Eben Ezer Baptist Church)",
         ],
-        stack: [ReactLogo, NodeJS, MongoDB, JavaScript, Git],
+        stack: [Wordpress, Ubuntu],
       },
     ],
   },
