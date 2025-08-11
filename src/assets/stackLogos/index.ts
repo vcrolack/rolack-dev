@@ -37,6 +37,8 @@ import DiscordJS from "./../stackLogos/DiscordJS.svg";
 import Gcp from "./../../assets/stackLogos/Gcp.svg";
 import TanStack from "./../../assets/stackLogos/TanStack.svg";
 import Swift from "./../../assets/stackLogos/Swift.svg";
+import Wordpress from "./../../assets/stackLogos/Wordpress.svg";
+import Ubuntu from "./../../assets/stackLogos/Ubuntu.svg";
 
 export {
   TypeScript,
@@ -78,4 +80,6 @@ export {
   Gcp,
   TanStack,
   Swift,
+  Wordpress,
+  Ubuntu,
 };

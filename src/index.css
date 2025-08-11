@@ -184,7 +184,7 @@ textarea {
   align-items: center;
   -webkit-box-shadow: -4px 25px 34px -9px rgba(0, 0, 0, 0.41);
   box-shadow: -4px 25px 34px -9px rgba(0, 0, 0, 0.41);
-  z-index: 10;
+  z-index: 1000;
 }
 
 .header .logo {
@@ -238,6 +238,7 @@ textarea {
 .container {
   width: 100%;
   height: auto;
+  margin-bottom: 50px;
 }
 
 .container-banner {
@@ -741,6 +742,198 @@ form {
   width: 12px;
   background: #91cb00;
   animation: loader 1.8s linear infinite;
+}
+
+/* src/styles/experience.css */
+:root {
+  --bg: #0f1115;
+  --text: #e8edf2;
+  --muted: #9aa3ad;
+  --card: #1a1d22;
+  --line: #4d4e4e;
+  --neon: #91cb01; /* tu verde */
+}
+
+.xp {
+  background: var(--bg);
+  color: var(--text);
+  padding: 48px 20px;
+}
+.xp__header h1 {
+  text-align: center;
+  letter-spacing: 0.35em;
+  margin: 0 0 28px;
+}
+
+.xp__timeline {
+  position: relative;
+  max-width: 1121px;
+  margin: 0 auto;
+  display: grid;
+  row-gap: 56px;
+}
+.xp__line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  transform: translateX(-50%);
+  background: linear-gradient(var(--line), var(--line));
+  border-radius: 999px;
+}
+.xp__row {
+  display: grid;
+  align-items: center; /* <- clave */
+}
+
+/* columnas como ya tienes */
+.xp__row--left {
+  grid-template-columns: minmax(0, 520px) 80px 1fr;
+}
+.xp__row--right {
+  grid-template-columns: 1fr 80px minmax(0, 520px);
+}
+
+/* ubicación explícita */
+.xp__row--left > .xp__company {
+  grid-column: 1;
+}
+.xp__row--left > .xp__node {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.xp__row--right > .xp__node {
+  grid-column: 2;
+  grid-row: 1;
+}
+.xp__row--right > .xp__company {
+  grid-column: 3;
+}
+
+/* el nodo centrado en su celda */
+.xp__node {
+  justify-self: center;
+  align-self: center; /* <- asegúralo */
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+/* ojo con márgenes de la card que desplacen la percepción */
+.xp__company {
+  margin: 0;
+}
+
+.xp__node {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--neon);
+  box-shadow: 0 0 0 8px color-mix(in oklab, var(--neon) 25%, transparent);
+  justify-self: center;
+  align-self: center;
+  z-index: 10;
+}
+
+/* Tarjeta empresa */
+.xp__company {
+  background: var(--card);
+  border: 1px solid #242a31;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+.xp__company-head {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.xp__logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  object-fit: contain;
+  background: #0b0d10;
+}
+.xp__company-name {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.xp__company-name a {
+  color: var(--text);
+  text-decoration: none;
+}
+.xp__company-name a:hover {
+  color: var(--neon);
+}
+.xp__location {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.xp__roles {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.xp__role {
+  background: #12151a;
+  border: 1px solid #232831;
+  border-radius: 12px;
+  padding: 12px;
+}
+.xp__role-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.xp__role-title {
+  margin: 0;
+  font-size: 1rem;
+}
+.xp__dates {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.xp__desc {
+  margin: 8px 0 0 18px;
+}
+.xp__desc li {
+  margin: 6px 0;
+}
+.xp__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.xp__tag {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border: 1px solid #2b3038;
+  border-radius: 999px;
+}
+
+/* Responsive: 1 columna en móvil */
+@media (max-width: 900px) {
+  .xp__row,
+  .xp__row--left,
+  .xp__row--right {
+    grid-template-columns: 1fr;
+  }
+  .xp__line {
+    display: none;
+  }
+  .xp__node {
+    display: none;
+  }
 }
 
 @keyframes loader {
