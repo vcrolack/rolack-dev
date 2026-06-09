@@ -8,9 +8,6 @@ interface TimelineProps {
 }
 
 export const Timeline: React.FC<TimelineProps> = ({ companies }) => {
-  useEffect(() => {
-    console.log(companies);
-  });
   return (
     <section className="xp__timeline" aria-label="Experiencia cronológica">
       <div className="xp__line" aria-hidden="true" />

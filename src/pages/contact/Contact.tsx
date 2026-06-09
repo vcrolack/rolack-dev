@@ -20,6 +20,7 @@ export const Contact = () => {
     handleChange,
     handleBlur,
     handleSubmit,
+    isFormValid,
   } = useForm(initialForm, useValidationsForm);
 
   const sendForm = useRef<HTMLFormElement | null>(null);
@@ -109,7 +110,11 @@ export const Contact = () => {
                 </div>
               </div>
               <div className="submit-container">
-                <button className="btn" type="submit">
+                <button
+                  disabled={loading || !isFormValid()}
+                  className={`btn ${!isFormValid() ? "btn-disabled" : ""}`}
+                  type="submit"
+                >
                   Send
                 </button>
               </div>

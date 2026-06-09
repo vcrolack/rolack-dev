@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import emailjs from "@emailjs/browser";
-import { FormState } from "../interfaces/form-state";
 import { Errors } from "./useValidationsForm";
 
 export interface Form {
@@ -17,7 +16,7 @@ export interface MessageResponse {
 
 export const useForm = (
   initialForm: Form,
-  validateForm: (form: Form) => Errors
+  validateForm: (form: Form) => Errors,
 ) => {
   const [form, setForm] = useState<Form>(initialForm);
   const [errors, setErrors] = useState<Errors>({});
@@ -26,7 +25,7 @@ export const useForm = (
   const [messageResponse, setMessageResponse] = useState<MessageResponse>();
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
 
@@ -41,20 +40,34 @@ export const useForm = (
     setErrors(validateForm(form));
   };
 
+  const isFormValid = () => {
+    return (
+      Object.keys(errors).length === 0 &&
+      form.name &&
+      form.email &&
+      form.message &&
+      !loading
+    );
+  };
+
   const sendEmail = (sendForm: any, target: any) => {
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAIL_SERVICE!,
         import.meta.env.VITE_TEMPLATE_ID!,
         sendForm.current,
-        import.meta.env.VITE_PUBLIC_KEY!
+        import.meta.env.VITE_PUBLIC_KEY!,
       )
       .then(
-        (result) => {
+        () => {
           setLoading(false);
           setResponse(true);
           target.reset();
-          form.message = "";
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
 
           setMessageResponse({
             message: "Message sent successfully",
@@ -80,7 +93,7 @@ export const useForm = (
           setTimeout(() => {
             setResponse(false);
           }, 3000);
-        }
+        },
       )
       .catch((e) => {
         console.log(e.message);
@@ -106,5 +119,6 @@ export const useForm = (
     handleChange,
     handleBlur,
     handleSubmit,
+    isFormValid,
   };
 };

@@ -564,7 +564,7 @@ textarea {
   background-color: #272727 !important;
 }
 
-.btn:hover {
+.btn:not(:disabled):hover {
   background-color: #272727;
   color: #91cb00;
 }
@@ -578,6 +578,11 @@ textarea {
 
 .btn-container a {
   margin-bottom: 30px;
+}
+
+.btn:disabled {
+  background-color: #91cb008c !important;
+  cursor: not-allowed;
 }
 
 .text-button {
