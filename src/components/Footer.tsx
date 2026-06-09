@@ -5,7 +5,7 @@ export const Footer = () => {
     <div className="footer">
       <div className="footer-container">
         <div className="description">
-          <p>&copy;ROLACK DEV - 2022</p>
+          <p>&copy;ROLACK DEV - {new Date().getFullYear()}</p>
         </div>
         <div className="social-networks">
           <a
