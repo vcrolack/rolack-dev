@@ -33,8 +33,38 @@ export const EXPERIENCE: CompanyExperience[] = [
         id: "amaris-experienced",
         title: "Experienced Consultant",
         start: "2025-06",
-        description: [],
-        stack: [Angular],
+        description: [
+          "As an Experienced Consultant, my focus evolved toward the consolidation, maintenance, and scalability of technical solutions, acting as a technical point of contact within the client’s ecosystem, particularly in Frontend development.",
+          <h3>Responsibilities & Impact:</h3>,
+          <>
+            <strong>Architectural Evolution & Implementation:</strong>{" "}
+            Responsible for defining and establishing technical guidelines
+            within the existing Microfrontends ecosystem. I designed and
+            implemented software design patterns (such as the Facade Pattern and
+            Strategy Pattern) to enable a Cross-Country architecture, allowing
+            multiple business contexts to share code in a clean, decoupled, and
+            efficient manner while ensuring these guidelines are maintained
+            day-to-day.
+          </>,
+          <>
+            <strong>Code Quality & Resilience:</strong> Ensuring application
+            robustness through the rigorous application of design patterns,
+            modularity, and mature error handling, guaranteeing that the
+            software is highly testable and maintainable in the long run.
+          </>,
+          <>
+            <strong>Technical Enabler & Support:</strong> Actively assisting
+            other development teams in resolving complex technical issues and
+            explaining the system architecture at a high level, facilitating a
+            smooth and unified adoption of the tech stack.
+          </>,
+          <>
+            <strong>Key Technologies:</strong> NestJS, TypeScript, Angular,
+            Microfrontends Architecture, Design Patterns (Facade, Strategy),
+            Clean Code.
+          </>,
+        ],
+        stack: [Angular, NestJS, TypeScript, Sass],
       },
       {
         id: "amaris-consultant",

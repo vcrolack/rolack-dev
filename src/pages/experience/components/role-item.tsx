@@ -14,7 +14,7 @@ export function RoleItem({ role }: { role: Role }) {
       {role.description?.length > 0 && (
         <ul className="xp__desc">
           {role.description.map((d, i) => (
-            <li key={i}>{d}</li>
+            <p key={i}>{d}</p>
           ))}
         </ul>
       )}
