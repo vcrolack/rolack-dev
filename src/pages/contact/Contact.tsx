@@ -1,8 +1,10 @@
 import React, { useRef } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 import { Form, useForm, useScreenSize, useValidationsForm } from "../../hooks";
 import { Banner, Input, Textarea, Loader, Message } from "@components/";
 import { bannerHome } from "@assets/img";
+import { isClickableInput } from "@testing-library/user-event/dist/utils";
 
 const initialForm: Form = {
   name: "",
@@ -17,10 +19,12 @@ export const Contact = () => {
     loading,
     response,
     messageResponse,
+    isCaptchaValid,
     handleChange,
     handleBlur,
     handleSubmit,
     isFormValid,
+    setIsCaptchaValid,
   } = useForm(initialForm, useValidationsForm);
 
   const sendForm = useRef<HTMLFormElement | null>(null);
@@ -109,10 +113,18 @@ export const Contact = () => {
                   </div>
                 </div>
               </div>
+              <div className="recaptcha-container">
+                <ReCAPTCHA
+                  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                  onChange={(token: string | null) =>
+                    setIsCaptchaValid(!!token)
+                  }
+                ></ReCAPTCHA>
+              </div>
               <div className="submit-container">
                 <button
-                  disabled={loading || !isFormValid()}
-                  className={`btn ${!isFormValid() ? "btn-disabled" : ""}`}
+                  disabled={loading || !isFormValid() || !isCaptchaValid}
+                  className={`btn ${!isFormValid() || !isCaptchaValid ? "btn-disabled" : ""}`}
                   type="submit"
                 >
                   Send

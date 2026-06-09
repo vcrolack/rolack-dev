@@ -23,6 +23,7 @@ export const useForm = (
   const [loading, setLoading] = useState<boolean>(false);
   const [response, setResponse] = useState<boolean | null>(null);
   const [messageResponse, setMessageResponse] = useState<MessageResponse>();
+  const [isCaptchaValid, setIsCaptchaValid] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -46,6 +47,7 @@ export const useForm = (
       form.name &&
       form.email &&
       form.message &&
+      isCaptchaValid &&
       !loading
     );
   };
@@ -116,9 +118,11 @@ export const useForm = (
     loading,
     response,
     messageResponse,
+    isCaptchaValid,
     handleChange,
     handleBlur,
     handleSubmit,
     isFormValid,
+    setIsCaptchaValid,
   };
 };

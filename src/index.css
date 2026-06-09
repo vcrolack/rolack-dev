@@ -685,6 +685,14 @@ form {
   margin-right: 50px;
 }
 
+.recaptcha-container {
+  transform: scale(0.8);
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .submit-container {
   width: 100%;
   height: 100px;
@@ -1204,6 +1212,13 @@ form {
   input {
     width: auto;
   }
+
+  /* .recaptcha-container {
+    width: 100%;
+    transform: scale(0.8);
+    display: flex;
+    justify-content: center;
+  } */
 
   .submit-container {
     display: block;
