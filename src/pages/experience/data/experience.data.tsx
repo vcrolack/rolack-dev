@@ -30,9 +30,17 @@ export const EXPERIENCE: CompanyExperience[] = [
     location: "Remote / LATAM",
     roles: [
       {
+        id: "amaris-consultant",
+        title: "Senior Consultant",
+        start: "2026-06",
+        description: ["As a Senior Consultant, my focus evolved toward the consolidation, maintenance, and scalability of technical solutions, acting as a technical point of contact within the client’s ecosystem, particularly in Frontend development."],
+        stack: [Angular, NestJS, TypeScript, Sass],
+      },
+      {
         id: "amaris-experienced",
         title: "Experienced Consultant",
         start: "2025-06",
+        end: "2026-06",
         description: [
           "As an Experienced Consultant, my focus evolved toward the consolidation, maintenance, and scalability of technical solutions, acting as a technical point of contact within the client’s ecosystem, particularly in Frontend development.",
           <h3>Responsibilities & Impact:</h3>,
